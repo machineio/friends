@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="title"><%= translate("allContacts") %></h3>
+        <table id="contacts-list" class="table">
+            <thead>
+                <tr>
+                    <th><%= translate("firstName") %></th>
+                    <th><%= translate("lastName") %></th>
+                    <th><%= translate("phoneNumber") %></th>
+                    <th><%= translate("email") %></th>
+                    <th><%= translate("country") %></th>
+                    <th><%= translate("location") %></th>
+                    <th><%= translate("timezone") %></th>
+                    <th><%= translate("checked") %></th>
+                    <th><%= translate("dnc") %></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="no-contacts"></div>
+        <div class="pagination">
+            <ul class="pagination">
+                <li><a href="javascript:;"><%= translate("previous") %></a></li>
+                <li class="active"><a href="javascript:;">1</a></li>
+                <li><a href="javascript:;">2</a></li>
+                <li><a href="javascript:;">3</a></li>
+                <li><a href="javascript:;">4</a></li>
+                <li><a href="javascript:;"><%= translate("next") %></a></li>
+            </ul>
+        </div>
+    </div>
+</div>

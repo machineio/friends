@@ -1,0 +1,122 @@
+<div class="container">
+
+    <div class="row">
+                        
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("upload") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-cloud-upload fa-stack-1x"></i>
+                    </span>
+
+                    <form enctype="multipart/form-data" action="/upload/" method="post" id="upload-contacts-form" class="form-contacts" novalidate="novalidate">
+
+                        <div class="form-group">
+                            <label for="directory_name"><%= translate("directoryName") %></label>
+                            <input type="text" id="directory_name" name="directory_name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="directory_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="directory_description" name="directory_description" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filearg"><%= translate("fileInput") %></label>
+                            <input type="file" name="filearg" id="filearg">
+                            <p class="help-block"><%= translate("uploadFromMyDevice") %>.</p>
+                        </div>
+
+                        <button id="upload-csv-btn" class="btn btn-success btn-block" type="submit" value="upload"><%= translate("uploadCSVfile") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("selectContactDirectory") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-folder fa-stack-1x"></i>
+                    </span>
+
+                    <form id="answer-sound-form" class="form-sound" novalidate="novalidate">
+  
+
+                        <p class="help-block"><%= translate("getDirectoryList") %>.</p>
+
+                        <button id="get-dir-btn" class="btn btn-success btn-block" type="submit"><%= translate("getDirectory") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("addContact") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-user fa-stack-1x"></i>
+                    </span>
+
+                    <form id="add-contact-form" novalidate="novalidate">
+
+                        <div class="form-group">
+                            <label for="contact_first_name"><%= translate("firstName") %></label>
+                            <input type="text" id="contact_first_name" name="contact_first_name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_last_name"><%= translate("lastName") %></label>
+                            <input type="text" id="contact_last_name" name="contact_last_name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_phone"><%= translate("phoneNumber") %></label>
+                            <input type="tel" id="new-phone-number" name="contact_phone_number" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_email"><%= translate("email") %></label>
+                            <input type="tel" id="new-email" name="contact_email" class="form-control">
+                        </div>
+
+                        <button id="add-contact-btn" class="btn btn-success btn-block" type="submit"><%= translate("addContact") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li><a href="#all-contacts-tab" data-toggle="tab"><%= translate("allContacts") %></a></li>
+                <li><a href="#directories-tab" data-toggle="tab"><%= translate("directories") %></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="all-contacts-tab"></div>
+                <div class="tab-pane" id="directories-tab"></div>
+            </div>  
+        </div>
+    </div>
+</div>

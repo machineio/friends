@@ -1,0 +1,63 @@
+<div class="container">
+
+    <div class="row">
+        <div id="signup-alert" class="alert alert-danger alert-dismissible hide" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">
+                    <%= translate("Close") %>
+                </span>
+            </button>
+            <p></p>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 left_box">
+            <div class="perk_box">
+                <h3><%= translate("letsGetStarted") %></h3>
+                <p>Get running in seconds with your own account.</p>
+                <div class="perk">
+                    <span class="icos ico1"></span>
+                    <p>Call tracking, detailed record analytics.</p>
+                </div>
+                <div class="perk">
+                    <span class="icos ico2"></span>
+                    <p>Complete campaign management for inbound and outbound.</p>
+                </div>
+                <div>
+                    <p>Already have an account?</p>
+                    <button id="login-btn" class="btn btn-lg btn-secondary btn-block" type="login"><%= translate("signIn") %></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <form id="signup-form" class="form-signup" novalidate="novalidate">
+                <h3><%= translate("createYourUserAccount") %></h3>
+
+                <div class="form-group">
+                    <input type="text" id="signup_username" name="signup_username" class="form-control" placeholder="<%= translate("yourUsername") %>">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="signup_email" name="signup_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="signup_password" name="signup_password" placeholder="<%= translate("password") %>"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="<%= translate("confirmPassword") %>"/>
+                </div>
+
+                <button id="signup-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signUp") %></button>
+
+                <p>By clicking "Sign up", you agree to our terms of service and privacy policy. We will send you account related emails occasionally.</p>
+            </form>
+
+        </div>
+    </div>
+</div>
+

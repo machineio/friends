@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="title"><%= translate("allCampaigns") %></h3>
+        <table id="campaigns-list" class="table">
+            <thead>
+                <tr>
+                    <th><%= translate("campaign") %></th>
+                    <th><%= translate("numbers") %></th>
+                    <th><%= translate("strategy") %></th>
+                    <th><%= translate("callerId") %></th>
+                    <th><%= translate("blacklist") %></th>
+                    <th><%= translate("uuid") %></th>
+                    <th><%= translate("actions") %></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="no-campaigns"></div>
+        <div class="pagination">
+            <ul class="pagination">
+                <li><a href="javascript:;"><%= translate("previous") %></a></li>
+                <li class="active"><a href="javascript:;">1</a></li>
+                <li><a href="javascript:;">2</a></li>
+                <li><a href="javascript:;">3</a></li>
+                <li><a href="javascript:;">4</a></li>
+                <li><a href="javascript:;"><%= translate("next") %></a></li>
+            </ul>
+        </div>
+    </div>
+</div>

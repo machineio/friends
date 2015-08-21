@@ -1,0 +1,455 @@
+<div class="container">
+
+    <div class="row">
+        
+        <div class="col-md-3">
+
+            <div class="vcard" itemscope="" itemtype="http://schema.org/Person">
+
+                <img src="/static/img/heads/username.jpg" class="img-responsive" alt="Change your image">
+
+                <h1 class="vcard-names">
+                    <span class="vcard-fullname" itemprop="name">Cebus Capuchin</span>
+                    <span class="vcard-username" itemprop="additionalName">cebus</span>
+                </h1>
+
+                <ul class="vcard-details list-unstyled">
+                    <li>
+                        <i class="fa fa-users fa-fw"></i>
+                        io fun
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker fa-fw"></i>
+                        Costa Rica
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope-o fa-fw"></i>
+                        <a class="email" href="mailto:chassoul@gmail.com">cebus@iofun.io</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-link fa-fw"></i>
+                        <a href="http://iofun.io/cebus" class="url" rel="nofollow me">http://iofun.com/cebus</a>
+                    </li>
+                   <li>
+                       <i class="fa fa-clock-o fa-fw"></i>
+                        <span class="join-label">Joined on </span>
+                        <span class="join-date">Jun 24, 2011</span>
+                   </li>
+                </ul>
+
+                <div class="vcard-stats">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="vcard-stat" href="/cebus/received">
+                                <strong class="vcard-stat-count">0</strong>
+                                <span class="text-muted"><%= translate("received") %></span>
+                            </a>
+                            <a class="vcard-stat" href="/cebus/answer">
+                                <strong class="vcard-stat-count">0</strong>
+                                <span class="text-muted"><%= translate("answer") %></span>
+                            </a>
+                            <a class="vcard-stat" href="/cebus/drop">
+                                <strong class="vcard-stat-count">0</strong>
+                                <span class="text-muted"><%= translate("missed") %></span>
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+
+
+                <div class="vcard-orgs">
+                    <h4><%= translate("organizations") %></h4>
+                    <div class="avatars">
+                        <a href="/iofun" aria-label="iofun" class="vcard-org-avatar tooltipped tooltipped-s" itemprop="follows"><img alt="io fun" data-user="5116771" height="36" src="https://avatars2.githubusercontent.com/u/5116771?v=2&amp;s=72" width="36"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-9">
+            <div class="row">
+
+                <div class="pull-right">
+                    <a href="#settings" class="btn btn-default">
+                    <i class="fa fa-pencil fa-fw"></i>
+                    <%= translate("editProfile") %>
+                    </a>
+                </div>
+
+                 <ul class="nav nav-tabs">
+                    <li class="active"><a href="#contributions-tab" data-toggle="tab"><i class="fa fa-check fa-fw"></i> <%= translate("contributions") %></a></li>
+                    <li><a href="#campaigns-tab" data-toggle="tab"><i class="fa fa-dot-circle-o fa-fw"></i> <%= translate("campaigns") %></a></li>
+                    <li><a href="#activity-tab" data-toggle="tab"><i class="fa fa-smile-o fa-fw"></i> <%= translate("userActivity") %></a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="contributions-tab" class="tab-pane active">
+                    
+                        
+
+                        <div class="row">
+                            
+
+                            <div class="col-md-6">
+                                <h3><%= translate("summary") %></h3>
+
+                                <table class="table stat-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="value">records</td>
+                                            <td><%= translate("records") %></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="value">minutes</td>
+                                            <td><%= translate("minutes") %></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="value">rec_avg</td>
+                                            <td><%= translate("durationAverage") %></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="value">$billing</td>
+                                            <td><%= translate("total") %></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-md-6">
+                        
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><%= translate("contributions") %></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="cal-heatmap"></div>
+                                    </div>
+                                    <div class="panel-footer">Summary of records, issues opened, and comments.</div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                        
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><%= translate("popularCampaigns") %></h3>
+                                    </div>
+
+                                    <!-- List group -->
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><%= translate("contributedTo") %></h3>
+                                    </div>
+                                    
+                                    <!-- List group -->
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Cras justo odio</li>
+                                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                                        <li class="list-group-item">Morbi leo risus</li>
+                                        <li class="list-group-item">Porta ac consectetur ac</li>
+                                        <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                        
+                            <div class="bs-example pull-right">
+
+                                <div class="btn-group">
+                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><i class="fa fa-history fa-fw"></i> <span data-label-placement=""><%= translate("oneWeek") %></span> <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <input type="radio" id="act_1" name="act" value="1">
+                                            <label for="act_1"><%= translate("oneDay") %></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="act_2" name="act" value="2">
+                                            <label for="act_2"><%= translate("threeDays") %></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="act_3" name="act" value="3" checked="">
+                                            <label for="act_3"><%= translate("oneWeek") %></label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="act_4" name="act" value="4">
+                                            <label for="act_4"><%= translate("oneMonth") %></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                    
+                            </div>
+                            <h4><%= translate("contributionActivity") %></h4>
+
+                            </div>
+                        </div>
+
+                        <div class="blankslate">
+                            <h4><%= translate("userNoActivityThisPeriod") %>.</h4>
+                        </div> 
+
+
+                    </div>
+
+
+                    <div id="campaigns-tab" class="tab-pane">
+
+                        <div class="row">
+                            <div class="col-md-5">
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="<%= translate("findAcampaign") %>">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><%= translate("search") %></button>
+                                    </span>
+                                    
+                                </div><!-- /input-group -->
+                            </div>
+
+                            <div class="col-md-7">
+
+                                <a href="#campaigns" class="btn btn-success pull-right">
+                                    <i class="fa fa-dot-circle-o fa-fw"></i>
+                                    <%= translate("newOption") %>
+                                </a>
+
+                                <ul class="nav nav-pills">
+                                    <li class="active"><a href="#tabs4-pane1" data-toggle="tab"><%= translate("all") %></a></li>
+                                    <li class=""><a href="#tabs4-pane2" data-toggle="tab"><%= translate("active") %></a></li>
+                                    <li class=""><a href="#tabs4-pane3" data-toggle="tab"><%= translate("paused") %></a></li>
+                                    <li class=""><a href="#tabs4-pane4" data-toggle="tab"><%= translate("inbound") %></a></li>
+                                    <li class=""><a href="#tabs4-pane5" data-toggle="tab"><%= translate("outbound") %></a></li>
+                                </ul>
+                            </div>
+                                 
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                        
+                                <div class="tab-content">
+                                <div id="tabs4-pane1" class="tab-pane active">
+
+                                    <ul class="list-group">
+                                                                                
+                                        <li class="list-group-item">
+                                            <i class="fa fa-random fa-2x pull-left"></i>
+                                            <ul class="list-inline pull-right">
+                                                <li>
+                                                    <i class="fa fa-star fa-fw"></i> 0
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check fa-fw"></i> 0
+                                                </li>
+                                            </ul>
+
+                                            <h4 class="list-group-item-heading"><a href="#">godzilla_in</a></h4>
+                                            
+                                            <p class="description">
+                                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                            </p>
+
+                                            <p class="updated-at text-muted">
+                                                Last updated <time datetime="2014-08-22T09:20:51-07:00" is="relative-time" title="Aug 22, 2014 10:20 AM MDT">23 minutes ago</time>
+                                            </p>
+
+                                        </li>
+
+                                        <li class="list-group-item">
+                                            <i class="fa fa-bullhorn fa-2x pull-left"></i>
+                                            <ul class="list-inline pull-right">
+                                                <li class="status"><%= translate("paused") %></li>
+                                                <li>
+                                                    <i class="fa fa-star fa-fw"></i> 0
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-share fa-fw"></i> 0
+                                                </li>
+                                            </ul>
+
+                                            <h4 class="list-group-item-heading"><a href="#">godzilla_out</a></h4>
+                                            
+                                            <p class="description">
+                                                Bring daemons to life or destroy them forever. Cross platform, Node.js.
+                                            </p>
+
+                                            <p class="updated-at text-muted">
+                                                Last updated <time datetime="2014-08-22T09:20:51-07:00" is="relative-time" title="Aug 22, 2014 10:20 AM MDT">45 minutes ago</time>
+                                            </p>
+
+                                        </li>
+                                        
+                                    </ul>
+                                  
+                                </div>
+
+                                <div id="tabs4-pane2" class="tab-pane">
+                                    <ul class="list-group">
+                                                                                
+                                        <li class="list-group-item">
+                                            <i class="fa fa-random fa-2x pull-left"></i>
+                                            <ul class="list-inline pull-right">
+                                                <li>
+                                                    <i class="fa fa-star fa-fw"></i> 0
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check fa-fw"></i> 0
+                                                </li>
+                                            </ul>
+
+                                            <h4 class="list-group-item-heading"><a href="#">godzilla_in</a></h4>
+                                            
+                                            <p class="description">
+                                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                            </p>
+
+                                            <p class="updated-at text-muted">
+                                                Last updated <time datetime="2014-08-22T09:20:51-07:00" is="relative-time" title="Aug 22, 2014 10:20 AM MDT">23 minutes ago</time>
+                                            </p>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tabs4-pane3" class="tab-pane">
+                                    <ul class="list-group">
+
+                                        <li class="list-group-item">
+                                            <i class="fa fa-bullhorn fa-2x pull-left"></i>
+                                            <ul class="list-inline pull-right">
+                                                <li class="status"><%= translate("paused") %></li>
+                                                <li>
+                                                    <i class="fa fa-star fa-fw"></i> 0
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-share fa-fw"></i> 0
+                                                </li>
+                                            </ul>
+
+                                            <h4 class="list-group-item-heading"><a href="#">godzilla_out</a></h4>
+                                            
+                                            <p class="description">
+                                                Bring daemons to life or destroy them forever. Cross platform, Node.js.
+                                            </p>
+
+                                            <p class="updated-at text-muted">
+                                                Last updated <time datetime="2014-08-22T09:20:51-07:00" is="relative-time" title="Aug 22, 2014 10:20 AM MDT">45 minutes ago</time>
+                                            </p>
+
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div id="tabs4-pane4" class="tab-pane">
+                                  <ul class="list-group">
+                                                                                
+                                        <li class="list-group-item">
+                                            <i class="fa fa-random fa-2x pull-left"></i>
+                                            <ul class="list-inline pull-right">
+                                                <li>
+                                                    <i class="fa fa-star fa-fw"></i> 0
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-check fa-fw"></i> 0
+                                                </li>
+                                            </ul>
+
+                                            <h4 class="list-group-item-heading"><a href="#">godzilla_in</a></h4>
+                                            
+                                            <p class="description">
+                                                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                                            </p>
+
+                                            <p class="updated-at text-muted">
+                                                Last updated <time datetime="2014-08-22T09:20:51-07:00" is="relative-time" title="Aug 22, 2014 10:20 AM MDT">23 minutes ago</time>
+                                            </p>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tabs4-pane5" class="tab-pane">
+                                    <ul class="list-group">
+
+                                        <li class="list-group-item">
+                                            <i class="fa fa-bullhorn fa-2x pull-left"></i>
+                                            <ul class="list-inline pull-right">
+                                                <li class="status"><%= translate("paused") %></li>
+                                                <li>
+                                                    <i class="fa fa-star fa-fw"></i> 0
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-share fa-fw"></i> 0
+                                                </li>
+                                            </ul>
+
+                                            <h4 class="list-group-item-heading"><a href="#">godzilla_out</a></h4>
+                                            
+                                            <p class="description">
+                                                Bring daemons to life or destroy them forever. Cross platform, Node.js.
+                                            </p>
+
+                                            <p class="updated-at text-muted">
+                                                Last updated <time datetime="2014-08-22T09:20:51-07:00" is="relative-time" title="Aug 22, 2014 10:20 AM MDT">45 minutes ago</time>
+                                            </p>
+
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                              </div><!-- /.tab-content -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="blankslate">
+                            <h4><%= translate("userDoesntHaveAnyCampaignsYet") %>.</h4>
+                        </div> 
+                    </div>
+                    
+
+                    <div id="activity-tab" class="tab-pane">
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <i class="fa fa-bullhorn fa-fw pull-left"></i>
+                                  
+                                <p class="description">
+                                   cebus created campaign cebus/godzilla_out  5 hours ago
+                                </p>
+
+                            </li>
+                                        
+                        </ul>
+                    </div>
+                </div><!-- /.tab-content -->
+
+            </div>
+        </div>
+
+    </div>
+</div>

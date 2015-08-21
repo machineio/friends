@@ -1,0 +1,128 @@
+<div class="container">
+        
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("newCampaign") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-random fa-stack-1x"></i>
+                    </span>
+
+                    <form id="profile-form" class="form-profile" novalidate="novalidate">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="btn-group ">
+                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        <span data-label-placement=""><%= account %></span> 
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <input type="radio" id="campaign_account_1" name="campaign_account" value="1" checked="">
+                                            <label for="campaign_account_1"><%= account %></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">/</span>
+                                    <input id="campaign_name" type="text" class="form-control" placeholder="Schedule for using Pillows and Beanbags">
+                                </div>
+
+                                <p>
+                                    <%= translate("greatCampaignNames") %>.
+                                </p>
+
+                            </div>
+                        </div>                                       
+
+                        <div class="form-group">
+                            <label for="campaign_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="campaign_description" name="campaign_description" class="form-control">
+                        </div>
+
+                        <div class="form-checkbox">
+                            <label>
+                                <input checked="checked" class="js-privacy-toggle" id="repository_public_true" name="repository[public]" tabindex="5" type="radio" value="true">
+                                <%= translate("inbound") %>
+                            </label>
+                            <span class="mega-octicon octicon-repo"></span>
+
+                            <span class="note">
+                                Anyone can see this campaign. You choose who can send messages.
+                            </span>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <label>
+                                <input checked="checked" class="js-privacy-toggle" id="repository_public_false" name="repository[public]" tabindex="5" type="radio" value="false">
+                                <%= translate("outbound") %>
+                            </label>
+                            <span class="mega-octicon octicon-lock"></span>
+                            <span class="note">
+                                <%= translate("youChooseWhoUseCampaign") %>.
+                            </span>
+                        </div>
+
+                        <button id="create-campaign-btn" class="btn btn-success btn-block" type="submit"><%= translate("createCampaign") %></button>
+                    </form>
+                      
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("exportCampaigns") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-cloud-download fa-stack-1x"></i>
+                    </span>
+
+                    <form id="export-campaign-form" class="form-export" novalidate="novalidate">
+  
+
+                        <p class="help-block"><%= translate("getCampaignList") %>.</p>
+
+                        <button id="get-export-btn" class="btn btn-success btn-block" type="submit"><%= translate("exportCSV") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li><a href="#all-campaigns-tab" data-toggle="tab"><%= translate("all") %></a></li>
+                <li><a href="#active-tab" data-toggle="tab"><%= translate("active") %></a></li>
+                <li><a href="#paused-tab" data-toggle="tab"><%= translate("paused") %></a></li>
+                <li><a href="#inbound-tab" data-toggle="tab"><%= translate("inbound") %></a></li>
+                <li><a href="#outbound-tab" data-toggle="tab"><%= translate("outbound") %></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="all-campaigns-tab"></div>
+                <div class="tab-pane" id="active-tab"></div>
+                <div class="tab-pane" id="paused-tab"></div>
+                <div class="tab-pane" id="inbound-tab"></div>
+                <div class="tab-pane" id="outbound-tab"></div>
+            </div>  
+        </div>
+    </div>
+</div>

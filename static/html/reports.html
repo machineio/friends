@@ -1,0 +1,111 @@
+ <div id="reports">
+
+    <div class="inner">
+
+        <div class="container">
+            <div class="row">
+                <!-- control from -->
+                <div id="fun-control-from"></div>
+
+                <!-- control to -->
+                <div id="fun-control-to"></div>
+
+                <!-- find lapse -->
+                <div id="fun-find-lapse"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <section id="nav-pills">
+                        <h2><%= translate("resources") %></h2>
+                        <div class="tabbable">
+                            <ul id="myTab" class="nav nav-pills">
+                                <li><a href="#report-tab-1" data-toggle="tab"><%= translate("accounts") %></a></li>
+                                <li><a href="#report-tab-2" data-toggle="tab"><%= translate("orgs") %></a></li>
+                                <!--
+                                <li><a href="#report-tab-3" data-toggle="tab"><%= translate("monkeys") %></a></li>
+                                <li><a href="#report-tab-4" data-toggle="tab"><%= translate("daemons") %></a></li>
+                                -->
+                                <li><a href="#report-tab-5" data-toggle="tab"><%= translate("nodes") %></a></li>
+                                <li><a href="#report-tab-6" data-toggle="tab"><%= translate("clusters") %></a></li>
+                                <li><a href="#report-tab-7" data-toggle="tab"><%= translate("cohorts") %></a></li>
+                                <li><a href="#report-tab-8" data-toggle="tab"><%= translate("cubes") %></a></li>
+                                <li><a href="#report-tab-8" data-toggle="tab"><%= translate("tasks") %></a></li>
+                                <li class="active"><a href="#report-tab-9" data-toggle="tab"><%= translate("records") %></a></li>
+                                <li><a href="#report-tab-10" data-toggle="tab"><%= translate("campaigns") %></a></li>                                
+                            </ul>
+
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade active in" id="details-tab">
+                                    <!-- start detail -->
+                                    <h3 class="title"><%= translate("details") %></h3>
+
+                                    <table id="cdr-list" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><%= translate("date") %></th>
+                                                <th><%= translate("account") %></th>
+                                                <th><%= translate("source") %></th>
+                                                <th><%= translate("destination") %></th>
+                                                <th><%= translate("duration") %></th>
+                                                <th><%= translate("waiting") %></th>
+                                                <th><%= translate("billing") %></th>
+                                                <th><%= translate("status") %></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <div class="pagination">
+                                        <ul class="pagination">
+                                            <li><a href="javascript:;"><%= translate("previous") %></a></li>
+                                            <li class="active"><a href="javascript:;">1</a></li>
+                                            <li><a href="javascript:;">2</a></li>
+                                            <li><a href="javascript:;">3</a></li>
+                                            <li><a href="javascript:;"><%= translate("next") %></a></li>
+                                        </ul>
+                                    </div>
+                    
+                                    <div id="no-records"></div>
+                                    <!-- end detail-->
+                                </div>
+
+                                <div class="tab-pane fade" id="distribution-tab">
+                                    <h3 class="title"><%= translate("distribution") %></h3>
+                                </div>
+                
+                                <div class="tab-pane fade" id="estimates-tab">
+                                    <h3 class="title"><%= translate("estimates") %></h3>
+                                </div>
+                    
+                                <div class="tab-pane fade" id="frequency-tab">
+                                    <h3 class="title"><%= translate("frequency") %></h3>
+                                </div>
+
+                                <div class="tab-pane fade" id="routes-tab">
+                                    <h3 class="title"><%= translate("routes") %></h3>
+                                </div>
+
+                                <div class="tab-pane fade" id="summaries-tab">
+                                    <h3 class="title"><%= translate("summaries") %></h3>
+
+                                    <table id="summaries-list" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><%= translate("lapse") %></th>
+                                                <th><%= translate("records") %></th>
+                                                <th><%= translate("minutes") %></th>
+                                                <th><%= translate("average") %></th>
+                                                <th><%= translate("billing") %></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

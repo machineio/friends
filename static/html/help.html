@@ -1,0 +1,109 @@
+<div class="container">
+        
+    <div class="row">
+
+        <div class="col-md-12">
+            
+            <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <a id="close-help"data-dismiss="panel" class="close">x</a>
+                <div class="panel-heading"><%= translate("customerSupportSystem") %></div>
+                <div class="panel-body">
+
+                    <form id="help-form" class="form-help" novalidate="novalidate">
+
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><%= translate("resource") %>
+                                    </th>
+                                    <td id="help-resource">
+                                        <div id="resource-dropdown" class="btn-group">
+                                            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                                <i class="fa fa-user fa-fw"></i>
+                                                <span data-label-placement="">Human resources</span>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul id="resource-list-ul" class="dropdown-menu">
+                                                <li>
+                                                    <input type="radio" id="current_resource_0" name="current_resource" value="0" checked="">
+                                                    <label for="current_resource_0">Human resources</label>
+                                                </li>
+                                                <!--
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#settings"><i class="fa fa-users fa-fw"></i> Manage organizations</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#orgs"><i class="fa fa-plus fa-fw"></i> Create organization</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                -->
+                                                <li>
+                                                    <input type="radio" id="current_resource_1" name="current_resource" value="1">
+                                                    <label for="current_resource_1">Sales department</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="current_resource_2" name="current_resource" value="2">
+                                                    <label for="current_resource_2">Customer support</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" id="current_resource_3" name="current_resource" value="3">
+                                                    <label for="current_resource_3">Communication Service Platform</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><%= translate("firstName") %></th>
+                                    <td id="help-firstname">
+                                        <div class="form-group">
+                                            <input type="text" id="help_firstname" name="help_firstname" class="form-control" placeholder="<%= translate("yourFirstName") %>">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><%= translate("lastName") %>
+                                    </th>
+                                    <td id="help-firstname">
+                                        <div class="form-group">
+                                             <input type="text" id="help_lastname" name="help_lastname" class="form-control" placeholder="<%= translate("yourLastName") %>">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><%= translate("followUp") %></th>
+                                    <td id="help-followup">
+                                        <div class="form-group">
+                                            <input type="text" id="help_email" name="help_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><%= translate("help") %></th>
+                                    <td id="help-title">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                              <input id="help_description" name="help_description" type="text" class="form-control" placeholder="<%=translate('heyHowCanWeHelpYou') %>">
+                                              <span class="input-group-btn">
+                                                <button id="help-query" class="btn btn-default" type="button">Send</button>
+                                              </span>
+                                            </div><!-- /input-group -->
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Table 
+
+                        <button id="help-query-btn" class="btn btn-success btn-block" type="submit" value="upload"><%= translate("sendQuery") %></button>
+                        -->
+                    </form>          
+                </div>
+            </div> 
+        </div> 
+    </div>
+</div>

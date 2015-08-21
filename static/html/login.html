@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="row">
+        <div id="signin-alert" class="alert alert-danger alert-dismissible hide" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">
+                    <%= translate("Close") %>
+                </span>
+            </button>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5">
+            <form class="form-signin">
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-user"></span>
+                    <input type="text" class="form-control" id="username" placeholder='<%= translate("yourAccount") %>'>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                    <input type="password" class="form-control" id="password" placeholder="<%= translate("Password") %>">
+                </div>
+                <button id="login-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signIn") %></button>
+            </form>
+        </div>
+    </div>
+
+</div>

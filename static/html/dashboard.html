@@ -1,0 +1,86 @@
+<div id="dashboard">
+
+    <div class="inner">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-2 pull-left">
+                    <div id="account-dropdown" class="btn-group">
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                            <span data-label-placement=""><%= account %></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul id="account-list-ul" class="dropdown-menu">
+                            <li>
+                                <input type="radio" id="current_account_0" name="current_account" value="0" checked="">
+                                <label for="current_account_0"><%= account %></label>
+                            </li>
+                            <li class="divider"></li>
+                            
+                            <li>
+                                <input type="radio" id="current_account_admin" name="current_account" value="admin">
+                                <label for="current_account_admin"><i class="fa fa-puzzle-piece fa-fw"></i> <%= translate("systemAdmin") %></label>
+                            </li>
+                            
+                            <li>
+                                <a href="#settings"><i class="fa fa-users fa-fw"></i> <%= translate("manageOrganizations") %></a>
+                            </li>
+                            <li>
+                                <a href="#orgs"><i class="fa fa-plus fa-fw"></i> <%= translate("createOrganization") %></a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </div>  
+                </div>
+
+                <div class="col-md-6 pull-right">
+
+                    <form>
+                        <div class="btn-group" data-toggle-name="is_private" data-toggle="buttons" >
+                                
+                        </div>
+                        <input type="hidden" name="is_private" value="0" />
+                    </form>
+
+                    <div class="btn-group pull-right" data-toggle="buttons">
+                        <label id="today-btn" class="btn btn-default active">
+                            <input type="radio" name="private" value="1"> <%= translate("today") %>
+                        </label>
+                        <label id="this-week-btn" class="btn btn-default">
+                            <input type="radio" name="private" value="2"> <%= translate("thisWeek") %>
+                        </label>
+                        <label id="this-month-btn" class="btn btn-default">
+                            <input type="radio" name="private" value="3"> <%= translate("thisMonth") %>
+                        </label>
+                        <label id="this-year-btn" class="btn btn-default">
+                            <input type="radio" name="private" value="4"> <%= translate("thisYear") %>
+                        </label>
+                    </div>
+                </div> 
+
+            </div>
+
+            <div class="row">
+                <!-- today summary -->
+                <div id="fun-today-summary"></div>
+
+                <!-- today activity chart -->
+                <div id="fun-today-activity-chart"></div>
+            </div>
+
+            <div class="row">
+                <!-- last records -->
+                <div id="fun-last-records"></div>
+
+                <!-- latest records -->
+                <div id="fun-latest-records"></div>
+
+                <!-- record type -->
+                <div id="fun-record-type"></div>
+            </div>
+
+        </div>
+    </div>
+</div>

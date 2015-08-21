@@ -1,0 +1,32 @@
+<div class="container">
+        
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("newOrganization") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <form id="profile-form" class="form-profile" novalidate="novalidate">
+
+                        <div class="form-group">
+                            <label for="organization_name"><%= translate("name") %></label>
+                            <input type="text" id="organization_name" name="organization_name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="billing_email"><%= translate("billingAddress") %></label>
+                            <input type="text" id="billing_email" name="billing_email" class="form-control">
+                        </div>
+
+                        <button id="new-org-btn" class="btn btn-success btn-block" type="submit"><%= translate("newOrganization") %></button>
+                    </form>
+
+                </div>
+            </div>  
+        </div>
+            
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="container">
+        
+    <div class="row">
+        <div class="col-md-2">
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-cube fa-stack-1x"></i>
+            </span>
+        </div>
+
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("newCube") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <form id="profile-form" class="form-profile" novalidate="novalidate">
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">/</span>
+                                    <input id="cube_name" type="text" class="form-control" placeholder="Weighted Companion Cube.">
+                                </div>
+
+                                <p>
+                                    <%= translate("greatCubeNames") %>.
+                                </p>
+
+                            </div>
+                        </div>                                       
+
+                        <div class="form-group">
+                            <label for="cube_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="cube_description" name="cube_description" class="form-control">
+                        </div>
+
+                        <button id="create-cube-btn" class="btn btn-success btn-block" type="submit"><%= translate("createCube") %></button>
+                    </form>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li><a href="#all-cubes-tab" data-toggle="tab"><%= translate("all") %></a></li>
+                <li><a href="#I-tab" data-toggle="tab"><%= translate("I") %></a></li>
+                <li><a href="#II-tab" data-toggle="tab"><%= translate("II") %></a></li>
+                <li><a href="#III-tab" data-toggle="tab"><%= translate("III") %></a></li>
+                <li><a href="#IV-tab" data-toggle="tab"><%= translate("IV") %></a></li>
+                <li><a href="#V-tab" data-toggle="tab"><%= translate("V") %></a></li>
+                <li><a href="#VI-tab" data-toggle="tab"><%= translate("VI") %></a></li>
+                <li><a href="#VII-tab" data-toggle="tab"><%= translate("VII") %></a></li>
+                <li><a href="#VIII-tab" data-toggle="tab"><%= translate("VIII") %></a></li>
+                <li><a href="#IX-tab" data-toggle="tab"><%= translate("IX") %></a></li>
+                <li><a href="#X-tab" data-toggle="tab"><%= translate("X") %></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="all-cubes-tab"></div>
+                <div class="tab-pane" id="I-tab"></div>
+                <div class="tab-pane" id="II-tab"></div>
+                <div class="tab-pane" id="III-tab"></div>
+                <div class="tab-pane" id="IV-tab"></div>
+                <div class="tab-pane" id="V-tab"></div>
+                <div class="tab-pane" id="VI-tab"></div>
+                <div class="tab-pane" id="VII-tab"></div>
+                <div class="tab-pane" id="VIII-tab"></div>
+                <div class="tab-pane" id="IX-tab"></div>
+                <div class="tab-pane" id="X-tab"></div>
+            </div>  
+        </div>
+    </div>
+</div>

@@ -1,0 +1,242 @@
+<div class="container">
+        
+    <div class="row">
+                        
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("answer") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-check fa-fw fa-stack-1x"></i>
+                    </span>
+
+                    <form id="answer-sound-form" class="form-sound" novalidate="novalidate">
+
+                        <div class="form-group">
+                            <label for="exampleInputFile"><%= translate("fileInput") %></label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Remember to mention the Transfer and Do Not Call options and digits in this message.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="answer_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="answer_description" name="answer_description" class="form-control">
+                        </div>
+
+                        <button id="create-btn" class="btn btn-success btn-block" type="submit"><%= translate("selectMessage") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("transfer") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-share fa-fw fa-stack-1x"></i>
+                    </span>
+
+                    <form id="answer-sound-form" class="form-sound" novalidate="novalidate">
+  
+
+                        <div class="form-group input-group">
+                            <label for="exampleInputFile"><%= translate("fileInput") %></label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Select a message that plays when the Transfer option is chosen.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transfer_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="campaign_description" name="transfer_description" class="form-control">
+                        </div>
+
+                        <div class="btn-group ">
+                            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement="">1</span> <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="radio" id="ex4_0" name="ex4" value="0">
+                                    <label for="ex4_0">0</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_1" name="ex4" value="1" checked="">
+                                    <label for="ex4_1">1</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_2" name="ex4" value="2">
+                                    <label for="ex4_2">2</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_3" name="ex4" value="3">
+                                    <label for="ex4_3">3</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_4" name="ex4" value="4">
+                                    <label for="ex4_4">4</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_5" name="ex4" value="5">
+                                    <label for="ex4_5">5</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_6" name="ex4" value="6">
+                                    <label for="ex4_6">6</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_7" name="ex4" value="7">
+                                    <label for="ex4_7">7</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_8" name="ex4" value="8">
+                                    <label for="ex4_8">8</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_9" name="ex4" value="9">
+                                    <label for="ex4_9">9</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transfer_number"><%= translate("transferNumber") %></label>
+                            <input type="text" id="transfer_number" name="transfer_number" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transfer_max"><%= translate("maxTransfers") %></label>
+                            <input type="text" id="max_transfers" name="max_transfers" class="form-control">
+                        </div>
+
+                        <button id="create-btn" class="btn btn-success btn-block" type="submit"><%= translate("selectMessage") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("answeringMachine") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-bell-slash fa-stack-1x"></i>
+                    </span>
+
+                    <form id="answer-machine-sound-form" class="form-sound" novalidate="novalidate">
+
+                        <div class="form-group">
+                            <label for="exampleInputFile"><%= translate("fileInput") %></label>
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Select a message that plays when an answering machine picks up your call.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="machine_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="machine_description" name="machine_description" class="form-control">
+                        </div>
+
+                        <button id="create-btn" class="btn btn-success btn-block" type="submit"><%= translate("selectMessage") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+
+        </div>
+
+                        
+
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("doNotCall") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-eraser fa-stack-1x"></i>
+                    </span>
+
+                    <form id="do_not_call-sound-form" class="form-sound" novalidate="novalidate">
+  
+
+                        <div class="form-group input-group">
+                                            
+                            <label for="audioFile"><%= translate("fileInput") %></label>
+                            <input type="file" id="audioFile">
+                            <p class="help-block">Select a message that plays to acknowledge that the Do Not Call option has been chosen.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="do_not_call_description"><%= translate("descriptionOptional") %></label>
+                            <input type="text" id="do_not_call_description" name="do_not_call_description" class="form-control">
+                        </div>
+
+                        <div class="btn-group ">
+                            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span data-label-placement="">1</span> <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="radio" id="ex4_0" name="ex4" value="0">
+                                    <label for="ex4_0">0</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_1" name="ex4" value="1" checked="">
+                                    <label for="ex4_1">1</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_2" name="ex4" value="2">
+                                    <label for="ex4_2">2</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_3" name="ex4" value="3">
+                                    <label for="ex4_3">3</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_4" name="ex4" value="4">
+                                    <label for="ex4_4">4</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_5" name="ex4" value="5">
+                                    <label for="ex4_5">5</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_6" name="ex4" value="6">
+                                    <label for="ex4_6">6</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_7" name="ex4" value="7">
+                                    <label for="ex4_7">7</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_8" name="ex4" value="8">
+                                    <label for="ex4_8">8</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ex4_9" name="ex4" value="9">
+                                    <label for="ex4_9">9</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button id="create-btn" class="btn btn-success btn-block" type="submit"><%= translate("selectMessage") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

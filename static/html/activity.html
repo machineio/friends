@@ -1,0 +1,103 @@
+<div class="container">
+
+    <div class="row">
+        
+        <div class="col-md-3">
+
+            <div class="vcard" itemscope="" itemtype="http://schema.org/Person">
+                <a href="#settings" aria-label="Change your avatar" class="vcard-avatar">
+
+                    <img src="/static/img/heads/username.jpg" class="img-responsive" alt="Your image">
+
+                </a>
+
+                <h1 class="vcard-names">
+                    <span class="vcard-fullname" itemprop="name">Cebus Capuchin</span>
+                    <span class="vcard-username" itemprop="additionalName">cebus</span>
+                </h1>
+
+                <ul class="vcard-details list-unstyled">
+                    <li>
+                        <i class="fa fa-users fa-fw"></i>
+                        io fun
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker fa-fw"></i>
+                        Costa Rica
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope-o fa-fw"></i>
+                        <a class="email" href="mailto:cebus@iofun.io">cebus@iofun.io</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-link fa-fw"></i>
+                        <a href="iofun.io/cebus" class="url" rel="nofollow me">http://iofun.io/cebus</a>
+                    </li>
+                   <li>
+                       <i class="fa fa-clock-o fa-fw"></i>
+                        <span class="join-label">Joined on </span>
+                        <span class="join-date">Jun 24, 2011</span>
+                   </li>
+                </ul>
+
+                <div class="vcard-stats">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="vcard-stat" href="/cebus/received">
+                                <strong class="vcard-stat-count">0</strong>
+                                <span class="text-muted"><%= translate("received") %></span>
+                            </a>
+                            <a class="vcard-stat" href="/cebus/answer">
+                                <strong class="vcard-stat-count">0</strong>
+                                <span class="text-muted"><%= translate("answer") %></span>
+                            </a>
+                            <a class="vcard-stat" href="/cebus/missed">
+                                <strong class="vcard-stat-count">0</strong>
+                                <span class="text-muted"><%= translate("missed") %></span>
+                            </a>
+                        </div>
+                    </div>
+        
+                </div>
+
+
+                <div class="vcard-orgs">
+                    <h4><%= translate("organizations") %></h4>
+                    <div class="avatars">
+                        <a href="/iofun" aria-label="iofun" class="vcard-org-avatar" itemprop="follows">
+                            <img alt="io fun" src="https://avatars2.githubusercontent.com/u/5116771?v=2&amp;s=72" data-user="5116771" height="36" width="36">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-9">
+            <div class="row">
+
+                <div class="pull-right">
+                    <a href="#settings" class="btn btn-default">
+                    <i class="fa fa-pencil fa-fw"></i>
+                    <%= translate("editProfile") %>
+                    </a>
+                </div>
+
+                 <ul class="nav nav-tabs">
+                    <li class="active"><a href="#contributions-tab" data-toggle="tab"><i class="fa fa-check fa-fw"></i> <%= translate("contributions") %></a></li>
+                    <li><a href="#campaigns-tab" data-toggle="tab"><i class="fa fa-dot-circle-o fa-fw"></i> <%= translate("campaigns") %></a></li>
+                    <li><a href="#activity-tab" data-toggle="tab"><i class="fa fa-smile-o fa-fw"></i> <%= translate("userActivity") %></a></li>
+                </ul>
+
+                <div class="tab-content">
+                    
+                </div><!-- /.tab-content -->
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

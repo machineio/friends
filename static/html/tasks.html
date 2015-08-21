@@ -1,0 +1,357 @@
+<div class="container">
+        
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("newTask") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plug fa-stack-1x"></i>
+                    </span>
+
+                    <form id="profile-form" class="form-profile" novalidate="novalidate">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="btn-group ">
+                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        <span data-label-placement="">username</span> 
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <input type="radio" id="task_account_1" name="task_account" value="1" checked="">
+                                            <label for="task_account_1">username</label>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#settings"><i class="fa fa-heartbeat fa-fw"></i> io fun owners</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#settings"><i class="fa fa-paw fa-fw"></i> fun-heads team</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">/</span>
+                                    <input id="task_name" type="text" class="form-control" placeholder="Schedule for using Beanbags and Pillows">
+                                </div>
+
+                                <p>
+                                    <%= translate("greatTaskNames") %>.
+                                </p>
+
+                            </div>
+                        </div>                                       
+
+                        <div class="form-group">
+                            <label for="task_description"><%= translate("description") %></label>
+                            <input type="text" id="task_description" name="task_description" class="form-control">
+                        </div>
+
+                        <!--
+
+                        <div class="form-checkbox">
+                            <label>
+                                <input checked="checked" class="js-privacy-toggle" id="repository_public_true" name="repository[public]" tabindex="5" type="radio" value="true">
+                                <%= translate("human") %>
+                            </label>
+                            <span class="mega-octicon octicon-repo"></span>
+
+                            <span class="note">
+                                Humans can work this task. You choose to assign the task to a human agent.
+                            </span>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <label>
+                                <input checked="checked" class="js-privacy-toggle" id="repository_public_false" name="repository[public]" tabindex="5" type="radio" value="false">
+                                <%= translate("monkey") %>
+                            </label>
+                            <span class="mega-octicon octicon-lock"></span>
+                            <span class="note">
+                                This stuff is bananas. You choose to assign the task to a group of monkeys.
+                            </span>
+                        </div>
+
+                        -->
+
+                        <button id="create-task-btn" class="btn btn-success btn-block" type="submit"><%= translate("createTask") %></button>
+                    </form>
+                      
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("exportTasks") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-cloud-download fa-stack-1x"></i>
+                    </span>
+
+                    <form id="export-task-form" class="form-export" novalidate="novalidate">
+  
+
+                        <p class="help-block"><%= translate("getTaskList") %>.</p>
+
+                        <button id="get-export-btn" class="btn btn-success btn-block" type="submit"><%= translate("exportCSV") %></button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li><a href="#all-tasks-tab" data-toggle="tab"><%= translate("allTasks") %></a></li>
+                <li><a href="#now-tab" data-toggle="tab"><%= translate("now") %></a></li>
+                <li><a href="#later-tab" data-toggle="tab"><%= translate("later") %></a></li>
+                <li><a href="#done-tab" data-toggle="tab"><%= translate("done") %></a></li>
+                <!--
+                <li><a href="#humans-tab" data-toggle="tab"><%= translate("humans") %></a></li>
+                <li><a href="#monkeys-tab" data-toggle="tab"><%= translate("monkeys") %></a></li>
+                -->
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="all-tasks-tab"></div>
+                <div class="tab-pane" id="now-tab"></div>
+                <div class="tab-pane" id="later-tab"></div>
+                <div class="tab-pane" id="done-tab"></div>
+                <!--
+                <div class="tab-pane" id="humans-tab"></div>
+                <div class="tab-pane" id="monkeys-tab"></div>
+                -->
+            </div>  
+        </div>
+    </div>
+</div>
+<!--
+<div class="container">
+        
+    <div class="row">
+
+        <div class="col-md-12">
+            <p>now, later, done</p>  
+
+            Star, Who, Title, Date, Flag, UUID
+
+            resource/collections
+            location
+
+            all-day
+            starts at
+            ends at
+            occurs {dropdown, once, etc..}
+            alarm {dropdown, none, etc}
+            message
+        </div>
+            
+    </div>
+</div>
+
+
+Lable   Title   Description Name    Email   Status  UUID
+
+
+-->
+
+<!-- task Modal popup -->
+<div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <h4 class="modal-title" id="myModalLabel"><%= translate("taskDetails") %></h4>
+            </div>
+            <div class="modal-body">
+
+                <p>Trouble Tickets track and manage IT problems and their solutions for multiple clients. Use this page to change the contents of an existing Trouble Ticket.</p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+
+                            <!-- Table -->
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><%= translate("uuid") %></th>
+                                        <td id="task-uuid"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("title") %></th>
+                                        <td id="task-title"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("assigned") %></th>
+                                        <td id="task-assigned"></td>    
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("label") %></th>
+                                        <td id="task-label"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+
+                            <!-- Table -->
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><%= translate("source") %></th>
+                                        <td id="task-source"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("status") %></th>
+                                        <!-- da fuq 
+                                        <td id="task-status">
+                                        -->
+                                        <td>
+                                            <div class="btn-group ">
+                                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                                    <span data-label-placement="">now</span> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <input type="radio" id="task_status_now" name="task_status" value="now" checked="">
+                                                        <label for="task_status_now">now</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="task_status_later" name="task_status" value="later" checked="">
+                                                        <label for="task_status_later">later</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="task_status_done" name="task_status" value="done" checked="">
+                                                        <label for="task_status_done">done</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("priority") %></th>
+                                        <td id="task-priority">
+                                            <div class="btn-group ">
+                                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                                    <i class="fa fa-user fa-fw"></i>
+                                                    <span data-label-placement="">small</span> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <input type="radio" id="current_status_0" name="current_priority" value="0" checked="">
+                                                        <label for="current_priority_0">small</label>
+                                                    </li>
+                                                        
+                                                    <li>
+                                                        <input type="radio" id="current_status_1" name="current_priority" value="1" checked="">
+                                                        <label for="current_priority_1">medium</label>
+                                                            
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="current_status_2" name="current_priority" value="2" checked="">
+                                                        <label for="current_priority_2">hight</label>
+                                                            
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>        
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("severity") %></th>
+                                        <td id="task-severity">
+                                            <div class="btn-group ">
+                                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                                    <i class="fa fa-user fa-fw"></i>
+                                                    <span data-label-placement="">info</span> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <input type="radio" id="current_status_0" name="current_severity" value="0" checked="">
+                                                        <label for="current_severity_0">info</label>
+                                                    </li>
+                                                        
+                                                    <li>
+                                                        <input type="radio" id="current_status_1" name="current_severity" value="1" checked="">
+                                                        <label for="current_severity_1">warning</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="current_status_2" name="current_severity" value="2" checked="">
+                                                        <label for="current_severity_2">error</label>
+                                                            
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Description:</h4>
+
+                        <p id="task-description"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>History:</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Comment:</h4>
+
+                        <textarea id="task-comment"
+                            rows="5"
+                            cols="66"></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+
+                <button id="update-task-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("update") %></button>
+                <button id="close-task-btn" class="btn btn-lg btn-danger btn-block" type="button"><%= translate("cancel") %></button>
+                <!--
+                <button id="signup-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signUp") %></button>
+                <button id="fun-login" type="button" class="btn btn-lg btn-default btn-block"><%= translate("login") %></button>
+                -->
+            </div>
+        </div>
+    </div>
+</div>

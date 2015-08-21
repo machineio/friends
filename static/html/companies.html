@@ -1,0 +1,446 @@
+<div class="container">
+        
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("newCompany") %></h3>
+                </div>
+                <div class="panel-body">
+
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-building-o fa-stack-1x"></i>
+                    </span>
+
+                    <form id="profile-form" class="form-profile" novalidate="novalidate">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="btn-group ">
+                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                        <i class="fa fa-user fa-fw"></i>
+                                        <span data-label-placement="">username</span> 
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <input type="radio" id="company_account_1" name="company_account" value="1" checked="">
+                                            <label for="company_account_1">username</label>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#settings"><i class="fa fa-heartbeat fa-fw"></i> io fun owners</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#settings"><i class="fa fa-paw fa-fw"></i> fun-heads team</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">/</span>
+                                    <input id="company_name" type="text" class="form-control" placeholder="Schedule for using Beanbags and Pillows">
+                                </div>
+
+                                <p>
+                                    <%= translate("greatCompanyNames") %>.
+                                </p>
+
+                            </div>
+                        </div>                                       
+
+                        <!--
+                        
+                        <div class="form-group">
+                            <label for="company_description"><%= translate("description") %></label>
+                            <input type="text" id="company_description" name="company_description" class="form-control">
+                        </div>
+
+                        <div class="form-checkbox">
+                            <label>
+                                <input checked="checked" class="js-privacy-toggle" id="repository_public_true" name="repository[public]" tabindex="5" type="radio" value="true">
+                                <%= translate("human") %>
+                            </label>
+                            <span class="mega-octicon octicon-repo"></span>
+
+                            <span class="note">
+                                Humans can work this company. You choose to assign the company to a human agent.
+                            </span>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <label>
+                                <input checked="checked" class="js-privacy-toggle" id="repository_public_false" name="repository[public]" tabindex="5" type="radio" value="false">
+                                <%= translate("monkey") %>
+                            </label>
+                            <span class="mega-octicon octicon-lock"></span>
+                            <span class="note">
+                                This stuff is bananas. You choose to assign the company to a group of monkeys.
+                            </span>
+                        </div>
+
+                        -->
+
+                        <button id="create-company-btn" class="btn btn-success btn-block" type="submit"><%= translate("createCompany") %></button>
+                    </form>
+                      
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= translate("exportCompanies") %></h3>
+                </div>
+                <div class="panel-body">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-cloud-download fa-stack-1x"></i>
+                    </span>
+                    <form id="export-company-form" class="form-export" novalidate="novalidate">
+                        <p class="help-block"><%= translate("getCompanyList") %>.</p>
+                        <button id="get-export-btn" class="btn btn-success btn-block" type="submit"><%= translate("exportCSV") %>
+                        </button>
+                    </form>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-pills">
+                <li><a href="#all-companies-tab" data-toggle="tab"><%= translate("allCompanies") %></a></li>
+                <li><a href="#active-tab" data-toggle="tab"><%= translate("active") %></a></li>
+                <li><a href="#disable-tab" data-toggle="tab"><%= translate("disable") %></a></li>
+                <!--
+                <li><a href="#done-tab" data-toggle="tab"><%= translate("done") %></a></li>
+                <li><a href="#humans-tab" data-toggle="tab"><%= translate("humans") %></a></li>
+                <li><a href="#monkeys-tab" data-toggle="tab"><%= translate("monkeys") %></a></li>
+                -->
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="all-companies-tab"></div>
+                <div class="tab-pane" id="now-tab"></div>
+                <div class="tab-pane" id="later-tab"></div>
+                <div class="tab-pane" id="done-tab"></div>
+                <div class="tab-pane" id="active-tab"></div>
+                <div class="tab-pane" id="disable-tab"></div>
+                <!--
+                <div class="tab-pane" id="humans-tab"></div>
+                <div class="tab-pane" id="monkeys-tab"></div>
+                -->
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+<!-- company Modal popup -->
+<div class="modal fade" id="companyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <h4 class="modal-title" id="myModalLabel"><%= translate("companyDetails") %></h4>
+            </div>
+            <div class="modal-body">
+            <!--
+                <p>Trouble Tickets track and manage IT problems and their solutions for multiple clients. Use this page to change the contents of an existing Trouble Ticket.</p>
+            -->
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+
+                            <!-- Table -->
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><%= translate("uuid") %></th>
+                                        <td id="company-uuid"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("status") %></th>
+                                        <td scope="row">
+                                            <div class="btn-group ">
+                                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+                                                    <i class="fa fa-user fa-fw"></i>
+                                                    <span data-label-placement="">disable</span> 
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <input type="radio" id="company_status_disable" name="company_status" value="1" checked="">
+                                                        <label for="company_status_disable">disable</label>
+                                                    </li>
+
+                                                    <li>
+                                                        <input type="radio" id="company_status_active" name="company_status" value="2" checked="">
+                                                        <label for="company_status_active">active</label>
+                                                    </li>
+
+                                                    <li>
+                                                        <input type="radio" id="company_status_suspended" name="company_status" value="3" checked="">
+                                                        <label for="company_status_suspended">suspended</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("newAccount") %></th>
+                                        <td id="reg_signup_username"></td>
+                                    </tr>
+                                    <tr class="hide">
+                                        <th scope="row"><%= translate("newAccountPassword") %></th>
+                                        <td id="reg_signup_password"></td>
+                                    </tr>
+                                    <tr class="hide">
+                                        <th scope="row"><%= translate("newAccountEmail") %></th>
+                                        <td id="reg_signup_email"></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th scope="row"><%= translate("companyName") %></th>
+                                        <td id="reg_company_name"></td>        
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("streetAddress") %></th>
+                                        <td id="reg_street_address"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("cityTown") %></th>
+                                        <td id="reg_city_town"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("stateProvince") %></th>
+                                        <td id="reg_state_province"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("zipPostal") %></th>
+                                        <td id="reg_zip_postal"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("countryCompany") %></th>
+                                        <td id="reg_country_company"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("dba") %></th>
+                                        <td id="reg_dba"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("telephone") %></th>
+                                        <td id="reg_telephone"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("fax") %></th>
+                                        <td id="reg_fax"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("companyEmail") %></th>
+                                        <td id="reg_company_email"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("legalCompanyName") %></th>
+                                        <td id="reg_legal_company_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("dateOfIncorporation") %></th>
+                                        <td id="reg_date_incorporation"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("incorporatedNumber") %></th>
+                                        <td id="reg_incorporated_number"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("incorporatedAddress") %></th>
+                                        <td id="reg_incorporated_address"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("incorporatedStateProvince") %></th>
+                                        <td id="reg_incorporated_state"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("incorporatedCountry") %></th>
+                                        <td id="reg_incorporated_country"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("federalTaxId") %></th>
+                                        <td id="reg_federal_tax_id"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("vatTaxIdFileNumber") %></th>
+                                        <td id="reg_vat_tax_id"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("ifCompanySubsidiaryName") %></th>
+                                        <td id="reg_subsidiary_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><%= translate("ifCompanySubsidiaryRegistrationNum") %></th>
+                                        <td id="reg_subsidiary_reg_num"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button id="update-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("update") %></button>
+                <button id="close-btn" class="btn btn-lg btn-danger btn-block" type="button"><%= translate("cancel") %></button>
+                <!--
+                <button id="signup-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signUp") %></button>
+                <button id="fun-login" type="button" class="btn btn-lg btn-default btn-block"><%= translate("login") %></button>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="newCompanyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                    <h4 class="modal-title" id="myModalLabel"><%= translate("createYourUserAccount") %></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="signup-alert" class="alert alert-danger alert-dismissible hide" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">
+                                    <%= translate("Close") %>
+                                </span>
+                            </button>
+                            <p></p>
+                        </div>        
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <form id="signup-form" class="form-signup" novalidate="novalidate">
+
+                                <div class="form-group">
+                                    <input type="text" id="reg_signup_username" name="reg_signup_username" class="form-control" placeholder="<%= translate("yourUsername") %>">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" id="reg_signup_email" name="reg_signup_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="reg_signup_password" name="reg_signup_password" placeholder="<%= translate("password") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="reg_confirm_password" name="reg_confirm_password" placeholder="<%= translate("confirmPassword") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_company_name" name="reg_company_name" placeholder="<%= translate("companyName") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_street_address" name="reg_street_address" placeholder="<%= translate("streetAddress") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_city_town" name="reg_city_town" placeholder="<%= translate("cityTown") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_state_province" name="reg_state_province" placeholder="<%= translate("stateProvince") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_zip_postal" name="reg_zip_postal" placeholder="<%= translate("zipPostal") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_country_company" name="reg_country_company" placeholder="<%= translate("countryCompany") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_dba" name="reg_dba" placeholder="<%= translate("dba") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_telephone" name="reg_telephone" placeholder="<%= translate("telephone") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_fax" name="reg_fax" placeholder="<%= translate("fax") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_company_email" name="reg_company_email" placeholder="<%= translate("companyEmail") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_legal_company_name" name="reg_legal_company_name" placeholder="<%= translate("legalCompanyName") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_date_incorporation" name="reg_date_incorporation" placeholder="<%= translate("dateOfIncorporation") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_incorporated_number" name="reg_incorporated_number" placeholder="<%= translate("incorporatedNumber") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_incorporated_address" name="reg_incorporated_address" placeholder="<%= translate("incorporatedAddress") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_incorporated_state" name="reg_incorporated_state" placeholder="<%= translate("incorporatedStateProvince") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_incorporated_country" name="reg_incorporated_country" placeholder="<%= translate("incorporatedCountry") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_federal_tax_id" name="reg_federal_tax_id" placeholder="<%= translate("federalTaxId") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_vat_tax_id" name="reg_vat_tax_id" placeholder="<%= translate("vatTaxIdFileNumber") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_subsidiary_name" name="reg_subsidiary_name" placeholder="<%= translate("ifCompanySubsidiaryName") %>"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="reg_subsidiary_reg_num" name="reg_subsidiary_reg_num" placeholder="<%= translate("ifCompanySubsidiaryRegistrationNum") %>"/>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="signup-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signUp") %></button>
+                    <button id="fun-login" type="button" class="btn btn-lg btn-default btn-block"><%= translate("login") %></button>
+                    <p>By clicking "Sign up", you agree to our terms of service and privacy policy. We will send you account related emails occasionally.</p>
+                </div>
+            </div>
+        </div>
+    </div>

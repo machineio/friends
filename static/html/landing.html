@@ -1,0 +1,146 @@
+<div class="jumbotron">
+    <div class="container">
+
+        <div class="row">
+            <div id="landing-alert" class="alert alert-danger alert-dismissible hide" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">
+                        <%= translate("Close") %>
+                    </span>
+                </button>
+                <p></p>
+            </div>        
+        </div>
+        
+        <div class="row">
+                
+            <div class="col-md-8">
+                <h1><%= translate("ioFunBanner") %></h1>
+
+                <div class="landing-text">
+                    <h3>
+                        <%= translate("ioFunLandingText") %>
+                    </h3>
+
+                    <p class="landing-actions">
+                        <a href="#login" class="btn btn-large"><%= translate("getStarted") %></a>
+                        <a href="#enterprise" class="btn btn-large"><%= translate("needEnterpriseResources") %>?</a>
+                    </p>
+                </div>
+                          
+            </div>
+
+            <div class="col-md-4">  
+                <form id="langing-signup-form" class="form-signup" novalidate="novalidate">
+    
+                    <div class="form-group">
+                        <input type="text" id="landing_username" name="landing_username" class="form-control" placeholder="<%= translate("yourUsername") %>" autofocus="">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="landing_email" name="landing_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="landing_password" name="landing_password" placeholder="<%= translate("createApassword") %>"/>
+                        <p class="text-muted"><%= translate("passwordStuffs") %><p>
+                    </div>
+                    
+                    <button id="landing-signup-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signUp") %></button>
+                    <!--
+                    <p class="text-muted"><%= translate("clickYouAgree") %> <a href="#terms"><%= translate("termsOfService") %></a> <%= translate("and") %> <a href="#privacy"><%= translate("privacyPolicy") %></a>. <%= translate("willSendRelatedEmails") %>.</p> -->
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+      
+
+<div class="container marketing">
+
+    <div class="row">
+
+        <div class="col-md-12 marketing-header">
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-heartbeat  fa-stack-1x"></i>
+            </span>
+<!--
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-spinner fa-stack-1x"></i>
+            </span>
+-->
+            <h2><%= translate("youLoveIt") %></h2>         
+            <h3><%= translate("powerComCamColIntAndS") %>.</h3>
+
+            <!--<p><%= translate("oldMan") %></p> <b><%= translate("oldManAristotle") %></b>-->
+            
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-bullhorn fa-stack-1x"></i>
+            </span>
+
+            <h3><%= translate("bcastMsgsThsndsCnts") %>.</h3>
+            <p><%= translate("sndVoiceMsgsCnts") %>.</p>
+        </div>
+
+        <div class="col-md-6">
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-cubes fa-stack-1x"></i>
+            </span>
+
+            <h3><%= translate("orgToolMonkeys") %>.</h3>
+            <p><%= translate("orgToolMonkeyDescription") %>.</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-pie-chart fa-stack-1x"></i>
+            </span>
+
+            <h3><%= translate("greatComStartWcoll") %>.</h3>
+            <p><%= translate("planFutureDiscussionTools") %>.</p>
+        </div>
+
+        <div class="col-md-6">
+            <span class="fa-stack fa-4x">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <!-- <i class="fa fa-cloud fa-stack-1x"></i> -->
+                <i class="fa fa-phone fa-stack-1x"></i>
+            </span>
+
+            <h3><%= translate("manageInbondAndOutbound") %>.</h3>
+            <p><%= translate("matchCallersandTeams") %>.</p>
+        </div>
+    </div>
+
+    <!-- enterprise -->
+    <div class="row">
+        <div class="col-md-12 marketing-header">
+
+            <h2><%= translate("bringFunDataCenter") %>.</h2>
+
+            <h3><%= translate("useFunEnterprise") %>.</h3>
+
+            <p class="landing-actions">
+                <a href="#enterprise" class="btn btn-large"><%= translate("learnAboutEnterprise") %></a>
+            </p> 
+            
+        </div>
+    </div>
+</div> <!-- /container -->  

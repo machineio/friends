@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="title"><%= translate("allCompanies") %></h3>
+        <table id="companies-list" class="table">
+            <thead>
+                <tr>
+                    <th><%= translate("companyName") %></th>
+                    <th><%= translate("countryCompany") %></th>
+                    <th><%= translate("account") %></th>
+                    <th><%= translate("telephone") %></th>
+                    <th><%= translate("email") %></th>
+                    <th><%= translate("dba") %></th>
+                    <th><%= translate("uuid") %></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="no-companies"></div>
+        <div class="pagination">
+            <ul class="pagination">
+                <li><a href="javascript:;"><%= translate("previous") %></a></li>
+                <li class="active"><a href="javascript:;">1</a></li>
+                <li><a href="javascript:;">2</a></li>
+                <li><a href="javascript:;">3</a></li>
+                <li><a href="javascript:;">4</a></li>
+                <li><a href="javascript:;"><%= translate("next") %></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
