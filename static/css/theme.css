@@ -297,8 +297,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	text-shadow: 0 -1px 0 #2190c6;
 }
 .btn-purple:hover, .btn-purple:focus, .btn-purple:active, .btn-purple.active, .open .dropdown-toggle.btn-purple {
-	background-color: #f449d2;
-	border-color: #cf0ba7;
+	background-color: #1b9acc;
+	border-color: #1b9acc;
 	color: #fff;
 }
 .btn-black {
