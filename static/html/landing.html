@@ -1,146 +1,368 @@
-<div class="jumbotron">
-    <div class="container">
+ection class="revolution-slider">
+  <div class="bannercontainer">
+    <div class="banner">
+      <ul>
+        <!-- Slide 1 -->
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" > 
+          <!-- Main Image --> 
+          <img src="static/images/slides/slide-bg.jpg" style="opacity:0;" alt="slidebg1"  data-bgfit="cover" data-bgposition="left bottom" data-bgrepeat="no-repeat"> 
+          <!-- Layers -->           
+          <!-- Layer 1 -->
+          <div class="caption sft revolution-starhotel bigtext"  
+                        data-x="505" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+                        <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> The Best Hostal <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>
+          <!-- Layer 2 -->
+          <div class="caption sft revolution-starhotel smalltext"  
+                        data-x="605" 
+                        data-y="105" 
+                        data-speed="800" 
+                        data-start="1700" 
+                        data-easing="easeOutBack">
+                        
+                        <span>And we like to keep it that way!</span>
+          </div>
+        <!-- Layer 3 -->
+                  <div class="caption sft"  
+                        data-x="775" 
+                        data-y="175" 
+                        data-speed="1000" 
+                        data-start="1900" 
+                        data-easing="easeOutBack">
+                        <a href="static/html/room-list.html" class="button btn btn-purple btn-lg">See rooms</a> 
+                  </div>
+        </li>
+        <!-- Slide 2 -->
+        <li data-transition="boxfade" data-slotamount="7" data-masterspeed="1000" > 
+          <!-- Main Image --> 
+          <img src="static/images/slides/slide-bg-02.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> 
+          <!-- Layers -->           
+          <!-- Layer 1 -->
+          <div class="caption sft revolution-starhotel bigtext"  
+                        data-x="585" 
+                        data-y="30" 
+                        data-speed="700" 
+                        data-start="1700" 
+                        data-easing="easeOutBack"> 
+                        <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span> Double room <span><i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span></div>
+          <!-- Layer 2 -->
+          <div class="caption sft revolution-starhotel smalltext"  
+                        data-x="682" 
+                        data-y="105" 
+                        data-speed="800" 
+                        data-start="1700" 
+                        data-easing="easeOutBack">
+                        <span>€ 99,- a night this summer</span></div>
+        <!-- Layer 3 -->
+                  <div class="caption sft"  
+                        data-x="785" 
+                        data-y="175" 
+                        data-speed="1000" 
+                        data-start="1900" 
+                        data-easing="easeOutBack">
+                        <a href="static/html/room-detail.html" class="button btn btn-purple btn-lg">Book this room</a> 
+                  </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        <div class="row">
-            <div id="landing-alert" class="alert alert-danger alert-dismissible hide" role="alert">
-                <button type="button" class="close" data-dismiss="alert">
-                    <span aria-hidden="true">&times;</span>
-                    <span class="sr-only">
-                        <%= translate("Close") %>
-                    </span>
-                </button>
-                <p></p>
-            </div>        
-        </div>
-        
-        <div class="row">
-                
-            <div class="col-md-8">
-                <h1><%= translate("ioFunBanner") %></h1>
-
-                <div class="landing-text">
-                    <h3>
-                        <%= translate("ioFunLandingText") %>
-                    </h3>
-
-                    <p class="landing-actions">
-                        <a href="#login" class="btn btn-large"><%= translate("getStarted") %></a>
-                        <a href="#enterprise" class="btn btn-large"><%= translate("needEnterpriseResources") %>?</a>
-                    </p>
+<!-- Reservation form -->
+<section id="reservation-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">         
+        <form class="form-inline reservation-horizontal clearfix" role="form" method="post" action="php/reservation.php" name="reservationform" id="reservationform">
+        <!-- Error message -->
+        <div id="message"></div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="email" accesskey="E">E-mail</label>
+                <input name="email" type="text" id="email" value="" class="form-control" placeholder="Please enter your E-mail"/>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="room">Room Type</label>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <select class="form-control" name="room" id="room">
+                  <option selected="selected" disabled="disabled">Select a room</option>
+                  <option value="Single">Single room</option>
+                  <option value="Double">Double Room</option>
+                  <option value="Deluxe">Deluxe room</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="checkin">Check-in</label>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-In is from 11:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <i class="fa fa-calendar infield"></i>
+                <input name="checkin" type="text" id="checkin" value="" class="form-control" placeholder="Check-in"/>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="checkout">Check-out</label>
+                <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Check-out is from 12:00"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                <i class="fa fa-calendar infield"></i>
+                <input name="checkout" type="text" id="checkout" value="" class="form-control" placeholder="Check-out"/>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <div class="form-group">
+                <div class="guests-select">
+                  <label>Guests</label>
+                  <i class="fa fa-user infield"></i>
+                  <div class="total form-control" id="test">1</div>
+                  <div class="guests">
+                    <div class="form-group adults">
+                      <label for="adults">Adults</label>
+                      <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="+18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                      <select name="adults" id="adults" class="form-control">
+                        <option value="1">1 adult</option>
+                        <option value="2">2 adults</option>
+                        <option value="3">3 adults</option>
+                      </select>
+                    </div>
+                    <div class="form-group children">
+                      <label for="children">Children</label>
+                      <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="0 till 18 years"> <i class="fa fa-info-circle fa-lg"> </i> </div>
+                      <select name="children" id="children" class="form-control">
+                        <option value="0">0 children</option>
+                        <option value="1">1 child</option>
+                        <option value="2">2 children</option>
+                        <option value="3">3 children</option>
+                      </select>
+                    </div>
+                    <button type="button" class="btn btn-default button-save btn-block">Save</button>
+                  </div>
                 </div>
-                          
+              </div>
             </div>
+            <div class="col-sm-2">
+              <button type="submit" class="btn btn-primary btn-block">Book Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="col-md-4">  
-                <form id="langing-signup-form" class="form-signup" novalidate="novalidate">
+<!-- Rooms -->
+<section class="rooms mt50">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="lined-heading"><span>Guests Favorite Rooms</span></h2>
+      </div>
+      <!-- Room -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="static/images/rooms/room-01.jpg" alt="room 1" class="img-responsive" />
+          <div class="mask">
+            <div class="main">
+              <h5>Double bedroom</h5>
+              <div class="price">&euro; 99<span>a night</span></div>
+            </div>
+            <div class="content">
+              <p><span>A modern hotel room in Star Hotel</span> Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum. 
+                malesuada metus.</p>
+              <div class="row">
+                <div class="col-xs-6">
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-check-circle"></i> Incl. breakfast</li>
+                    <li><i class="fa fa-check-circle"></i> Private balcony</li>
+                    <li><i class="fa fa-check-circle"></i> Sea view</li>
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-check-circle"></i> Free Wi-Fi</li>
+                    <li><i class="fa fa-check-circle"></i> Incl. breakfast</li>
+                    <li><i class="fa fa-check-circle"></i> Bathroom</li>
+                  </ul>
+                </div>
+              </div>
+              <a href="static/html/room-detail.html" class="btn btn-primary btn-block">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Room -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="static/images/rooms/room-02.jpg" alt="room 2" class="img-responsive" />
+          <div class="mask">
+            <div class="main">
+              <h5>King Size Bedroom </h5>
+              <div class="price">&euro; 149<span>a night</span></div>
+            </div>
+            <div class="content">
+              <p><span>A modern hotel room in Star Hotel</span> Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum. 
+                malesuada metus.</p>
+              <div class="row">
+                <div class="col-xs-6">
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-check-circle"></i> Incl. breakfast</li>
+                    <li><i class="fa fa-check-circle"></i> Private balcony</li>
+                    <li><i class="fa fa-check-circle"></i> Sea view</li>
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-check-circle"></i> Free Wi-Fi</li>
+                    <li><i class="fa fa-check-circle"></i> Incl. breakfast</li>
+                    <li><i class="fa fa-check-circle"></i> Bathroom</li>
+                  </ul>
+                </div>
+              </div>
+              <a href="static/html/room-detail.html" class="btn btn-primary btn-block">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Room -->
+      <div class="col-sm-4">
+        <div class="room-thumb"> <img src="static/images/rooms/room-03.jpg" alt="room 3" class="img-responsive" />
+          <div class="mask">
+            <div class="main">
+              <h5>Single room</h5>
+              <div class="price">&euro; 120<span>a night</span></div>
+            </div>
+            <div class="content">
+              <p><span>A modern hotel room in Star Hotel</span> Nunc tempor erat in magna pulvinar fermentum. Pellentesque scelerisque at leo nec vestibulum. 
+                malesuada metus.</p>
+              <div class="row">
+                <div class="col-xs-6">
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-check-circle"></i> Incl. breakfast</li>
+                    <li><i class="fa fa-check-circle"></i> Private balcony</li>
+                    <li><i class="fa fa-check-circle"></i> Sea view</li>
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-check-circle"></i> Free Wi-Fi</li>
+                    <li><i class="fa fa-check-circle"></i> Incl. breakfast</li>
+                    <li><i class="fa fa-check-circle"></i> Bathroom</li>
+                  </ul>
+                </div>
+              </div>
+              <a href="static/html/room-detail.html" class="btn btn-primary btn-block">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP's -->
+<section class="usp mt100">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="lined-heading"><span>Services</span></h2>
+      </div>
+      <div class="col-sm-3 bounceIn appear" data-start="0">
+      <div class="box-icon">
+        <div class="circle"><i class="fa fa-glass fa-lg"></i></div>
+        <h3>Beverages included</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
+        <a href="static/#">Read more<i class="fa fa-angle-right"></i></a> </div>
+        </div>
+      <div class="col-sm-3 bounceIn appear" data-start="400">
+      <div class="box-icon">
+        <div class="circle"><i class="fa fa-credit-card fa-lg"></i></div>
+        <h3>Stay First, Pay After!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
+        <a href="static/#">Read more<i class="fa fa-angle-right"></i></a> </div>
+        </div>
+      <div class="col-sm-3 bounceIn appear" data-start="800">
+      <div class="box-icon">      
+        <div class="circle"><i class="fa fa-cutlery fa-lg"></i></div>
+        <h3>24 Hour Restaurant</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
+        <a href="static/#">Read more<i class="fa fa-angle-right"></i></a> </div>
+        </div>
+      <div class="col-sm-3 bounceIn appear" data-start="1200">
+      <div class="box-icon">
+        <div class="circle"><i class="fa fa-tint fa-lg"></i></div>
+        <h3>Spa Included!</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum eleifend augue, quis rhoncus purus fermentum. </p>
+        <a href="static/#">Read more<i class="fa fa-angle-right"></i></a> </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Parallax Effect -->
+<script type="text/javascript">$(document).ready(function(){$('#parallax-image').parallax("50%", -0.35);});</script>
+
+<section class="parallax-effect mt100">
+  <div id="parallax-image" style="background-image: url(static/images/parallax/parallax-01.jpg);">
+    <div class="color-overlay fadeIn appear" data-start="600">
+      <div class="container">
+        <div class="content">
+          <h3 class="text-center">Q'tuanis  Hostal</h3>
+          <p class="text-center">An Exceptional Hostal!
+          <br>
+          <a href="static/html/blog.html" class="btn btn-default btn-lg mt30">Checkout the blog</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery-slider mt100">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="lined-heading"><span>Gallery</span></h2>
+      </div>
+    </div>
+  </div>
+  <div id="owl-gallery" class="owl-carousel">
+    <div class="item"><a href="static/images/gallery/1.jpg" data-rel="prettyPhoto[gallery1]"><img src="static/images/gallery/1.jpg" alt="Image 1"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="static/images/gallery/2.jpg" data-rel="prettyPhoto[gallery1]"><img src="static/images/gallery/2.jpg" alt="Image 2"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="static/images/gallery/3.jpg" data-rel="prettyPhoto[gallery1]"><img src="static/images/gallery/3.jpg" alt="Image 3"><i class="fa fa-search"></i></a></div>
+    <div class="item"><a href="static/images/gallery/4.jpg" data-rel="prettyPhoto[gallery1]"><img src="static/images/gallery/4.jpg" alt="Image 4"><i class="fa fa-search"></i></a></div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row"> 
+    <!-- Testimonials -->
+    <section class="testimonials mt100">
+      <div class="col-md-12">
+        <h2 class="lined-heading bounceInLeft appear" data-start="0"><span>The Best Hostal</span></h2>
+        <p><img src="static/images/tab/logo-footer.jpg" class="img-responsive codemachine-logo-footer"> 
+        <!-- Carousel -->
+        
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
     
-                    <div class="form-group">
-                        <input type="text" id="landing_username" name="landing_username" class="form-control" placeholder="<%= translate("yourUsername") %>" autofocus="">
-                    </div>
+</div> 
 
-                    <div class="form-group">
-                        <input type="text" id="landing_email" name="landing_email" class="form-control" placeholder="<%= translate("yourEmail") %>">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="landing_password" name="landing_password" placeholder="<%= translate("createApassword") %>"/>
-                        <p class="text-muted"><%= translate("passwordStuffs") %><p>
-                    </div>
-                    
-                    <button id="landing-signup-btn" class="btn btn-lg btn-primary btn-block" type="submit"><%= translate("signUp") %></button>
-                    <!--
-                    <p class="text-muted"><%= translate("clickYouAgree") %> <a href="#terms"><%= translate("termsOfService") %></a> <%= translate("and") %> <a href="#privacy"><%= translate("privacyPolicy") %></a>. <%= translate("willSendRelatedEmails") %>.</p> -->
-                </form>
-            </div>
-        </div>
-
-    </div>
-</div>
-      
-
-<div class="container marketing">
-
+<!-- Call To Action -->
+<section id="call-to-action" class="mt100">
+  <div class="container">
     <div class="row">
-
-        <div class="col-md-12 marketing-header">
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-heartbeat  fa-stack-1x"></i>
-            </span>
-<!--
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-spinner fa-stack-1x"></i>
-            </span>
--->
-            <h2><%= translate("youLoveIt") %></h2>         
-            <h3><%= translate("powerComCamColIntAndS") %>.</h3>
-
-            <!--<p><%= translate("oldMan") %></p> <b><%= translate("oldManAristotle") %></b>-->
-            
-        </div>
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <h2>Call US at 506 xxxxxxx</h2>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="/static/html/room-detail.html" target="_blank" class="btn btn-default btn-lg pull-right">Purchase</a>
+      </div>
     </div>
-
-    <div class="row">
-
-        <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-bullhorn fa-stack-1x"></i>
-            </span>
-
-            <h3><%= translate("bcastMsgsThsndsCnts") %>.</h3>
-            <p><%= translate("sndVoiceMsgsCnts") %>.</p>
-        </div>
-
-        <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-cubes fa-stack-1x"></i>
-            </span>
-
-            <h3><%= translate("orgToolMonkeys") %>.</h3>
-            <p><%= translate("orgToolMonkeyDescription") %>.</p>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-pie-chart fa-stack-1x"></i>
-            </span>
-
-            <h3><%= translate("greatComStartWcoll") %>.</h3>
-            <p><%= translate("planFutureDiscussionTools") %>.</p>
-        </div>
-
-        <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <!-- <i class="fa fa-cloud fa-stack-1x"></i> -->
-                <i class="fa fa-phone fa-stack-1x"></i>
-            </span>
-
-            <h3><%= translate("manageInbondAndOutbound") %>.</h3>
-            <p><%= translate("matchCallersandTeams") %>.</p>
-        </div>
-    </div>
-
-    <!-- enterprise -->
-    <div class="row">
-        <div class="col-md-12 marketing-header">
-
-            <h2><%= translate("bringFunDataCenter") %>.</h2>
-
-            <h3><%= translate("useFunEnterprise") %>.</h3>
-
-            <p class="landing-actions">
-                <a href="#enterprise" class="btn btn-large"><%= translate("learnAboutEnterprise") %></a>
-            </p> 
-            
-        </div>
-    </div>
-</div> <!-- /container -->  
+  </div>
+</section>
