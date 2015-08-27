@@ -1,7 +1,8 @@
 fun.views.extra = Backbone.View.extend({
 
     events: {
-        'click #subscribe-btn' : 'subscribe'
+        'click #subscribe-btn' : 'subscribe',
+        'click #booknow-btn': 'booknow'
     },
 
     initialize : function(options) {
@@ -75,6 +76,12 @@ fun.views.extra = Backbone.View.extend({
                 console.log('subscribe error');
             }
         });
+    },
+
+    booknow: function(event){
+        event.preventDefault();
+
+        console.log('wut? on booknow');
     }
 
 });
