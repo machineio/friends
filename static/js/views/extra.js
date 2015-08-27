@@ -22,6 +22,14 @@ fun.views.extra = Backbone.View.extend({
         } else {
             this.renderNavLanding();
         }
+
+        this.$('#checkin').datepicker({
+            'format':'yyyy-mm-dd'
+        });
+
+        this.$('#checkout').datepicker({
+            'format':'yyyy-mm-dd'
+        });
     },
 
     renderNavLanding: function(){
