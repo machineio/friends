@@ -101,7 +101,9 @@ fun.views.extra = Backbone.View.extend({
 
         console.log(email, room, checkin, checkout, guests);
 
-        var details = JSON.stringify({'room':room, 'checkin' checkin, 'checkout': checkout, 'guests': guests});
+        var stufa = {'room':room, 'checkin':checkin, 'checkout':checkout, 'guests':guests};
+
+        var details = JSON.stringify(stufa);
 
         var taskPayload = {
             first_name: 'Random',
