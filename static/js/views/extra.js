@@ -105,6 +105,20 @@ fun.views.extra = Backbone.View.extend({
 
         console.log(email, room, checkin, checkout, guests);
 
+        var details = JSON.Stringify({'room':room, 'checkin' checkin, 'checkout': checkout, 'guests': guests})
+
+        var taskPayload = {
+            first_name: 'Random',
+            last_name: 'Funster',
+            title: 'new reservation',
+            description: details,
+            label: 'QTuanis Reservation',
+            email: email,
+        };
+
+        var task = new fun.models.Task(taskPayload);
+        task.save();
+
         console.log('wut? on booknow');
     }
 
