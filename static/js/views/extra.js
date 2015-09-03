@@ -97,10 +97,6 @@ fun.views.extra = Backbone.View.extend({
 
         var checkout = this.$('#checkout').val();
 
-        //var adults = this.$('#adults').val();
-
-        //var children = this.$('#children').val();
-
         var guests = this.$('#guests').val();
 
         console.log(email, room, checkin, checkout, guests);
