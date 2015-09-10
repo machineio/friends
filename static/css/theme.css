@@ -450,7 +450,7 @@ img.zoom-img:hover {
 -------------------------------------------------- */
 /* Items */
 #top-header, #top-header a {
-	background: #d4c729;
+	background: #272727;
 	color: #939393;
 	font-size: 11px;
 }
@@ -1641,7 +1641,7 @@ color: #d1d1d1;
 }
 /* Footer Bottom */
 footer .footer-bottom {
-	background: #d4c729;
+	background: #272727;
 	padding: 30px 0;
 	margin-top: 50px;
 	line-height: 14px;
