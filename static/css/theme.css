@@ -292,9 +292,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 	box-shadow: inset 5px 5px 100px 100px #FFFFFF;
 }
 .btn-purple {
-	background-color: #2190c6;
-	border-color: #2190c6;
-	text-shadow: 0 -1px 0 #2190c6;
+	background-color: #008984;
+	border-color: #008984;
+	text-shadow: 0 -1px 0 #008984;
 }
 .btn-purple:hover, .btn-purple:focus, .btn-purple:active, .btn-purple.active, .open .dropdown-toggle.btn-purple {
 	background-color: #1b9acc;
