@@ -29,10 +29,10 @@ header, .navbar-nav .dropdown-menu, .blog-author img, .comment .avatar img, asid
 }
 /* RGB background color */
 .room-thumb .main .price, .comment, .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th, .panel-default > .panel-heading {
-	background-color: rgba(0, 137, 132, 1);
+	background-color: rgba(0, 137, 132, 0.05);
 }
 .parallax-effect .color-overlay {
-	background-color: rgba(0, 137, 132, 1);
+	background-color: rgba(0, 137, 132, 0.8);
 }
 /* Header
 -------------------------------------------------- */
