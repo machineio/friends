@@ -42,9 +42,9 @@ fun.Router = Backbone.Router.extend({
         })
 
         // rooms
-        fun.instances.rooms = new fun.views.rooms({
-            el:"#fun-rooms"
-        })
+        //fun.instances.rooms = new fun.views.rooms({
+        //    el:"#fun-rooms"
+        //})
 
         // contact
         fun.instances.gallery = new fun.views.contact({
