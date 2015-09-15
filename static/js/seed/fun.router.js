@@ -30,11 +30,6 @@ fun.Router = Backbone.Router.extend({
         fun.instances.landing = new fun.views.landing({
             el:"#fun-landing"
         });
-        
-        // settings
-        fun.instances.settings = new fun.views.settings({
-            el:"#fun-settings"
-        });
 
         // extra
         fun.instances.extra = new fun.views.extra({
@@ -44,6 +39,16 @@ fun.Router = Backbone.Router.extend({
         // contact
         fun.instances.contact = new fun.views.contact({
             el:"#fun-contact"
+        })
+
+        // rooms
+        fun.instances.rooms = new fun.views.rooms({
+            el:"#fun-rooms"
+        })
+
+        // contact
+        fun.instances.gallery = new fun.views.contact({
+            el:"#fun-gallery"
         })
 
         // footer
@@ -97,15 +102,26 @@ fun.Router = Backbone.Router.extend({
         fun.instances.footer.render();
     },
 
-    settings: function(){
+    rooms: function(){
         'use strict';
         this.account = localStorage.getItem("username");
-        var settings = translate('settings');
+        var rooms = translate('settings');
         fun.utils.hideAll();
         fun.instances.navbar.render();
-        fun.instances.subheader.render(settings);
-        fun.instances.settings.render(this.account);
-        //fun.instances.footer.render();
+        fun.instances.subheader.render(rooms);
+        fun.instances.rooms.render(this.account);
+        fun.instances.footer.render();
+    },
+
+    gallery: function(){
+        'use strict';
+        this.account = localStorage.getItem("username");
+        var gallery = translate('gallery');
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(rooms);
+        fun.instances.gallery.render(this.account);
+        fun.instances.footer.render();
     }
 });
 
