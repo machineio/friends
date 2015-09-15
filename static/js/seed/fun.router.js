@@ -86,18 +86,6 @@ fun.Router = Backbone.Router.extend({
         fun.instances.footer.render();
     },
 
-    profile: function(){
-        'use strict';
-        var profile = translate('profile');
-
-        fun.utils.hideAll();
-        fun.instances.navbar.render();
-        fun.instances.subheader.render(profile);
-        fun.instances.profile.render();
-        
-        fun.instances.footer.render();
-    },
-
     contact: function(){
         'use strict';
         var contact = translate('contact');
