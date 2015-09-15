@@ -9,6 +9,7 @@ fun.Router = Backbone.Router.extend({
     routes: {
         "": "home",
         "home": "home",
+        "contact": "contact",
         "landing": "landing",
         "settings": "settings"
     },
@@ -39,6 +40,11 @@ fun.Router = Backbone.Router.extend({
         fun.instances.extra = new fun.views.extra({
             el:"#fun-extra"
         });
+
+        // contact
+        fun.instances.contact = new fun.views.contact({
+            el:"#fun-contact"
+        })
 
         // footer
         fun.instances.footer = new fun.views.footer({
@@ -89,6 +95,17 @@ fun.Router = Backbone.Router.extend({
         fun.instances.subheader.render(profile);
         fun.instances.profile.render();
         
+        fun.instances.footer.render();
+    },
+
+    contact: function(){
+        'use strict';
+        var contact = translate('contact');
+
+        fun.utils.hideAll();
+        fun.instances.navbar.render();
+        fun.instances.subheader.render(contact);
+        fun.instances.contact.render();
         fun.instances.footer.render();
     },
 
