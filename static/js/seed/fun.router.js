@@ -104,7 +104,7 @@ fun.Router = Backbone.Router.extend({
 
         fun.utils.hideAll();
         fun.instances.navbar.render();
-        fun.instances.subheader.render(contact);
+        //fun.instances.subheader.render(contact);
         fun.instances.contact.render();
         fun.instances.footer.render();
     },
