@@ -10,6 +10,8 @@ fun.Router = Backbone.Router.extend({
         "": "home",
         "home": "home",
         "contact": "contact",
+        "rooms": "rooms",
+        "gallery": "gallery",
         "landing": "landing",
         "settings": "settings"
     },
@@ -104,23 +106,21 @@ fun.Router = Backbone.Router.extend({
 
     rooms: function(){
         'use strict';
-        this.account = localStorage.getItem("username");
-        var rooms = translate('settings');
+        var rooms = translate('rooms');
         fun.utils.hideAll();
         fun.instances.navbar.render();
-        fun.instances.subheader.render(rooms);
-        fun.instances.rooms.render(this.account);
+        //fun.instances.subheader.render(rooms)
+        fun.instances.rooms.render();
         fun.instances.footer.render();
     },
 
     gallery: function(){
         'use strict';
-        this.account = localStorage.getItem("username");
         var gallery = translate('gallery');
         fun.utils.hideAll();
         fun.instances.navbar.render();
-        fun.instances.subheader.render(rooms);
-        fun.instances.gallery.render(this.account);
+        //fun.instances.subheader.render(gallery);
+        fun.instances.gallery.render();
         fun.instances.footer.render();
     }
 });
