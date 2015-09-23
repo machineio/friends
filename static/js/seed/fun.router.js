@@ -49,7 +49,7 @@ fun.Router = Backbone.Router.extend({
         })
 
         // contact
-        fun.instances.gallery = new fun.views.contact({
+        fun.instances.gallery = new fun.views.gallery({
             el:"#fun-gallery"
         })
 
