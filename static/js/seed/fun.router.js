@@ -87,6 +87,7 @@ fun.Router = Backbone.Router.extend({
     landing: function(){
         'use strict';
         fun.utils.hideAll();
+        fun.utils.showLanding();
         fun.instances.navbar.render();
         fun.instances.landing.render();
         fun.instances.extra.render();
@@ -98,6 +99,7 @@ fun.Router = Backbone.Router.extend({
         var contact = translate('contact');
 
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         //fun.instances.subheader.render(contact);
         fun.instances.contact.render();
@@ -108,6 +110,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var rooms = translate('rooms');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         //fun.instances.subheader.render(rooms)
         fun.instances.rooms.render();
@@ -118,6 +121,7 @@ fun.Router = Backbone.Router.extend({
         'use strict';
         var gallery = translate('gallery');
         fun.utils.hideAll();
+        fun.utils.hideLanding();
         fun.instances.navbar.render();
         //fun.instances.subheader.render(gallery);
         fun.instances.gallery.render();
