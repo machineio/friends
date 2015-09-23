@@ -28,6 +28,7 @@ fun.views.rooms = Backbone.View.extend({
         template = _.template(fun.utils.getTemplate(fun.conf.templates.rooms));
 
         this.$el.html(template);
+        this.$el.removeClass("hide").addClass("show");
     }
 
 });
