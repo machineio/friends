@@ -195,7 +195,7 @@ fun.utils.getTemplate = function(url){
  */
 fun.utils.redirect = function(url) {
     window.location = url;
-}
+};
 
 
 /**
@@ -212,6 +212,24 @@ fun.utils.hideAll = function() {
     }
 };
 
+
+fun.utils.hideLanding = function(){
+    $("#landing-00").removeClass("show").addClass("hide");
+    $("#landing-01").removeClass("show").addClass("hide");
+    $("#landing-02").removeClass("show").addClass("hide");
+    $("#landing-03").removeClass("show").addClass("hide");
+    $("#landing-04").removeClass("show").addClass("hide");
+    $("#landing-05").removeClass("show").addClass("hide");
+};
+
+fun.utils.showLanding = function(){
+    $("#landing-00").removeClass("hide").addClass("show");
+    $("#landing-01").removeClass("hide").addClass("show");
+    $("#landing-02").removeClass("hide").addClass("show");
+    $("#landing-03").removeClass("hide").addClass("show");
+    $("#landing-04").removeClass("hide").addClass("show");
+    $("#landing-05").removeClass("hide").addClass("show");
+};
 
 /**
  * Rounds up a number.
