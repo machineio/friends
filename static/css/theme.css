@@ -1398,7 +1398,7 @@ aside .widget .news-content span a {
 	text-decoration: none;
 	overflow: hidden;
 	display: block;
-	margin-bottom: 30px;
+	margin-bottom: -6px;
 }
 .gallery a i, .gallery-slider a i {
 	width: 35px;
