@@ -14,6 +14,7 @@
 	overflow:hidden;
 	position:relative;
 	margin-bottom:-1px;
+	margin-top: 90px
 }
 .portfolio-items article {
 	float:left;
