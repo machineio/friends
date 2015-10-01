@@ -87,10 +87,11 @@ fun.views.rooms = Backbone.View.extend({
         console.log('wut? on booknow');
 
         // clean stuff on qtuanis
-        view.$('#email').val('');
-        view.$('#checkin').val('');
-        view.$('#checkout').val('');
-        view.$('#guests').val('');
+        view.$('#rooms-email').val('');
+        view.$('#rooms-room').val('');
+        view.$('#rooms-checkin').val('');
+        view.$('#rooms-checkout').val('');
+        view.$('#rooms-guests').val('');
     }
 
 });
