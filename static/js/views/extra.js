@@ -10,6 +10,8 @@ fun.views.extra = Backbone.View.extend({
     },
     
     render : function(){
+        // Render view function
+        'use strict';
         var template = _.template(
             fun.utils.getTemplate(fun.conf.templates.extra)
         );
@@ -87,25 +89,37 @@ fun.views.extra = Backbone.View.extend({
     },
 
     booknow: function(event){
+        // Render view function
+        'use strict';
+        var email,
+            room,
+            checkin,
+            checkout,
+            guests,
+            stufa,
+            details,
+            taskPayload,
+            task;
         event.preventDefault();
 
-        var email = this.$('#email').val();
-
-        var room  = this.$('#room').val();
-
-        var checkin = this.$('#checkin').val();
-
-        var checkout = this.$('#checkout').val();
-
-        var guests = this.$('#guests').val();
+        email = this.$('#email').val();
+        room  = this.$('#room').val();
+        checkin = this.$('#checkin').val();
+        checkout = this.$('#checkout').val();
+        guests = this.$('#guests').val();
 
         console.log(email, room, checkin, checkout, guests);
 
-        var stufa = {'room':room, 'checkin':checkin, 'checkout':checkout, 'guests':guests};
+        stufa = {
+            'room':room,
+            'checkin':checkin,
+            'checkout':checkout,
+            'guests':guests
+        };
 
-        var details = JSON.stringify(stufa);
+        details = JSON.stringify(stufa);
 
-        var taskPayload = {
+        taskPayload = {
             first_name: 'Random',
             last_name: 'Funster',
             title: 'new reservation',
