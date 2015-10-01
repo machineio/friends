@@ -28,6 +28,15 @@ fun.views.rooms = Backbone.View.extend({
         template = _.template(fun.utils.getTemplate(fun.conf.templates.rooms));
 
         this.$el.html(template);
+
+        this.$('#rooms-checkin').datepicker({
+            'format':'yyyy-mm-dd'
+        });
+
+        this.$('#rooms-checkout').datepicker({
+            'format':'yyyy-mm-dd'
+        });
+
         this.$el.removeClass("hide").addClass("show");
     },
 
