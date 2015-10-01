@@ -91,7 +91,7 @@ fun.views.rooms = Backbone.View.extend({
         //view.$('#rooms-room').val('');
         view.$('#rooms-checkin').val('');
         view.$('#rooms-checkout').val('');
-        view.$('#rooms-guests').val('');
+        view.$('#rooms-guests').val('1');
     }
 
 });
