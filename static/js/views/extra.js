@@ -136,7 +136,6 @@ fun.views.extra = Backbone.View.extend({
 
         // clean stuff on qtuanis
         view.$('#email').val('');
-        view.$('#room').val('');
         view.$('#checkin').val('');
         view.$('#checkout').val('');
         view.$('#guests').val('');
