@@ -53,6 +53,9 @@ fun.conf.urls = {
     alert: fun.utils.format('/alerts/%s', fun.conf.uuidAlert),
     alerts: '/alerts/',
 
+    task: fun.utils.format('/tasks/%s', fun.conf.uuidTask),
+    tasks: '/tasks/',
+
     /*sounds, recordings*/
 };
 
