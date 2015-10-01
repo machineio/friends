@@ -128,10 +128,17 @@ fun.views.extra = Backbone.View.extend({
             email: email,
         };
 
-        var task = new fun.models.Task(taskPayload);
+        task = new fun.models.Task(taskPayload);
         task.save();
 
         console.log('wut? on booknow');
+
+        // clean stuff on qtuanis
+        view.$('#email').val('');
+        view.$('#room').val('');
+        view.$('#checkin').val('');
+        view.$('#checkout').val('');
+        view.$('#guests').val('');
     }
 
 });
