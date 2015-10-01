@@ -99,7 +99,8 @@ fun.views.extra = Backbone.View.extend({
             stufa,
             details,
             taskPayload,
-            task;
+            task,
+            view = this;
         event.preventDefault();
 
         email = this.$('#email').val();
