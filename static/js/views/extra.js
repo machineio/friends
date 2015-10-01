@@ -138,7 +138,7 @@ fun.views.extra = Backbone.View.extend({
         view.$('#email').val('');
         view.$('#checkin').val('');
         view.$('#checkout').val('');
-        view.$('#guests').val('');
+        view.$('#guests').val('1');
     }
 
 });
