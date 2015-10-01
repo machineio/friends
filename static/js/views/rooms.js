@@ -46,11 +46,11 @@ fun.views.rooms = Backbone.View.extend({
             view = this;
         event.preventDefault();
 
-        email = this.$('#email').val();
-        room  = this.$('#room').val();
-        checkin = this.$('#checkin').val();
-        checkout = this.$('#checkout').val();
-        guests = this.$('#guests').val();
+        email = this.$('#rooms-email').val();
+        room  = this.$('#rooms-room').val();
+        checkin = this.$('#rooms-checkin').val();
+        checkout = this.$('#rooms-checkout').val();
+        guests = this.$('#rooms-guests').val();
 
         console.log(email, room, checkin, checkout, guests);
 
