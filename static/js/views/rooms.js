@@ -37,6 +37,7 @@ fun.views.rooms = Backbone.View.extend({
             'format':'yyyy-mm-dd'
         });
 
+        $(".owl-wrapper-outer").height("100vh");
         this.$el.removeClass("hide").addClass("show");
     },
 
