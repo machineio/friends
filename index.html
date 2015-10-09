@@ -508,7 +508,8 @@ $(document).ready(function() {
       // itemsTablet: false,
       // itemsMobile : false
   });
-  $(".owl-wrapper-outer").height("100vh");
+  var elt = document.getElementByClass(".owl-wrapper-outer");
+  elt.style.minHeight = '25vh';
 });
 </script>
 
