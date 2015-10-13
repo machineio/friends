@@ -57,7 +57,7 @@
       <div class="col-xs-6">
         <div class="th-text pull-left">
           <div class="th-item"> <a href="#"><i class="fa fa-phone"></i>(506) 2774 - 0104</a> </div>
-          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i>reservations@qtuanis.com</a></div>
+          <div class="th-item"> <a href="#"><i class="fa fa-envelope"></i>reservations@qtuanishostal.com</a></div>
         </div>
       </div>
       <div class="col-xs-6">
@@ -72,7 +72,7 @@
           </div>
         
           <div class="th-item">
-            <div class="social-icons"> <a href="static/#"><i class="fa fa-facebook"></i></a> <a href="static/#"><i class="fa fa-twitter"></i></a> <a href="static/#"><i class="fa fa-youtube-play"></i></a> </div>
+            <div class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-youtube-play"></i></a> </div>
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@
                         data-speed="1000" 
                         data-start="1900" 
                         data-easing="easeOutBack">
-                        <a href="static/html/rooms.html" class="button btn btn-purple btn-lg">See rooms</a> 
+                        <a href="#rooms.html" class="button btn btn-purple btn-lg">See rooms</a> 
                   </div>
 
         </li>
@@ -170,7 +170,7 @@
                         data-speed="1000" 
                         data-start="1900" 
                         data-easing="easeOutBack">
-                        <a href="static/html/rooms.html" class="button btn btn-purple btn-lg">See rooms</a> 
+                        <a href="#rooms" class="button btn btn-purple btn-lg">See rooms</a> 
                   </div>
                   
         </li>
@@ -203,7 +203,7 @@
                         data-speed="1000" 
                         data-start="1900" 
                         data-easing="easeOutBack">
-                        <a href="static/html/rooms.html" class="button btn btn-purple btn-lg">Book this room</a> 
+                        <a href="#rooms" class="button btn btn-purple btn-lg">Book this room</a> 
                   </div>
         </li>
       </ul>
@@ -248,7 +248,7 @@
                   </ul>
                 </div>
               </div>
-              <a href="static/html/rooms.html" class="btn btn-primary btn-block">Book Now</a>
+              <a href="#rooms" class="btn btn-primary btn-block">Book Now</a>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@
                   </ul>
                 </div>
               </div>
-              <a href="static/html/rooms.html" class="btn btn-primary btn-block">Book Now</a>
+              <a href="#rooms" class="btn btn-primary btn-block">Book Now</a>
             </div>
           </div>
         </div>
@@ -290,7 +290,7 @@
           <div class="mask">
             <div class="main">
               <h5>Share room</h5>
-              <div class="price">$ 22 <span>a night (max 6 guests)</span></div>
+              <div class="price">$ 25 <span>a night (max 6 guests)</span></div>
             </div>
             <div class="content">
               <p>This is our budget option, perfect for backpackers. Book a bed at this spacious cabin surrounded by our beautiful garden and the sounds of nature.  </p>
@@ -310,7 +310,7 @@
                   </ul>
                 </div>
               </div>
-              <a href="static/html/rooms.html" class="btn btn-primary btn-block">Book Now</a>
+              <a href="#rooms" class="btn btn-primary btn-block">Book Now</a>
             </div>
           </div>
         </div>
@@ -429,7 +429,7 @@
         <h2>Call Us at (506) 2774 - 0104</h2>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12">
-        <a href="/static/html/rooms" target="_blank" class="btn btn-default btn-lg pull-right">Purchase</a>
+        <a href="#rooms" target="_blank" class="btn btn-default btn-lg pull-right">Purchase</a>
       </div>
     </div>
   </div>
@@ -488,6 +488,29 @@
 
 <!-- fun router -->
 <script src="/static/js/seed/fun.router.js"></script>
+
+<script>
+$(document).ready(function() {
+  $(".carouselany").owlCarousel({
+      navigation : false, // Show next and prev buttons
+      slideSpeed : 400,
+      pagination : true,
+      autoHeight:false,
+      autoPlay:true,
+      addClassActive : true,
+      navigationText: false,
+      singleItem:true
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+  });
+  var elt = $('.owl-wrapper-outer')
+  elt.style.minHeight = '25vh';
+});
+</script>
 
 
 </body>
