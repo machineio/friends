@@ -48,6 +48,7 @@ fun.views.rooms = Backbone.View.extend({
             checkin,
             checkout,
             guests,
+            empty,
             stufa,
             details,
             taskPayload,
@@ -60,10 +61,7 @@ fun.views.rooms = Backbone.View.extend({
         checkin = this.$('#rooms-checkin').val();
         checkout = this.$('#rooms-checkout').val();
         guests = this.$('#rooms-guests').val();
-
-        var empty = fun.utils.emptyString(email);
-
-        console.log(empty);
+        empty = fun.utils.emptyString(email);
 
         if (!empty){
             stufa = {
