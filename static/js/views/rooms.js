@@ -67,6 +67,11 @@ fun.views.rooms = Backbone.View.extend({
 
         console.log(email==='');
 
+
+        var empty = fun.utils.emptyString(email);
+
+        console.log(empty);
+
         
         if (email !== ''){
             console.log(email, room, checkin, checkout, guests);

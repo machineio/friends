@@ -199,6 +199,13 @@ fun.utils.redirect = function(url) {
 
 
 /**
+* check if this stuff works on empty strings
+*/
+fun.utils.emptyString = function(str) {
+    return (!str || 0 === str.length);
+};
+
+/**
  * Hide all the UI stuff
  */
 fun.utils.hideAll = function() {
