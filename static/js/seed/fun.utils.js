@@ -202,7 +202,7 @@ fun.utils.redirect = function(url) {
 * check if this stuff works on empty strings
 */
 fun.utils.emptyString = function(str) {
-    return (!str || 0 === str.length);
+    return (!str || 0 === str.length || !str.trim());
 };
 
 /**
