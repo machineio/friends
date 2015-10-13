@@ -61,7 +61,10 @@ fun.views.rooms = Backbone.View.extend({
         checkout = this.$('#rooms-checkout').val();
         guests = this.$('#rooms-guests').val();
 
-        console.log(email, room, checkin, checkout, guests);
+        
+        if (email !== ''){
+            console.log(email, room, checkin, checkout, guests);
+        }
 
         stufa = {
             'room':room,
@@ -88,7 +91,6 @@ fun.views.rooms = Backbone.View.extend({
 
         // clean stuff on qtuanis
         view.$('#rooms-email').val('');
-        //view.$('#rooms-room').val('');
         view.$('#rooms-checkin').val('');
         view.$('#rooms-checkout').val('');
         view.$('#rooms-guests').val('1');
