@@ -61,6 +61,8 @@ fun.views.rooms = Backbone.View.extend({
         checkout = this.$('#rooms-checkout').val();
         guests = this.$('#rooms-guests').val();
 
+        console.log(typeof(email));
+
         
         if (email !== ''){
             console.log(email, room, checkin, checkout, guests);
