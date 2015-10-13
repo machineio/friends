@@ -61,42 +61,32 @@ fun.views.rooms = Backbone.View.extend({
         checkout = this.$('#rooms-checkout').val();
         guests = this.$('#rooms-guests').val();
 
-        console.log(typeof(email));
-
-        console.log(email === ' ');
-
-        console.log(email==='');
-
-
         var empty = fun.utils.emptyString(email);
 
         console.log(empty);
 
-        
-        if (email !== ''){
-            console.log(email, room, checkin, checkout, guests);
+        if (!empty){
+            stufa = {
+                'room':room,
+                'checkin':checkin,
+                'checkout':checkout,
+                'guests':guests
+            };
+
+            details = JSON.stringify(stufa);
+
+            taskPayload = {
+                first_name: 'Random',
+                last_name: 'Funster',
+                title: 'new reservation',
+                description: details,
+                label: 'QTuanis Reservation',
+                email: email,
+            };
+
+            task = new fun.models.Task(taskPayload);
+            task.save();
         }
-
-        stufa = {
-            'room':room,
-            'checkin':checkin,
-            'checkout':checkout,
-            'guests':guests
-        };
-
-        details = JSON.stringify(stufa);
-
-        taskPayload = {
-            first_name: 'Random',
-            last_name: 'Funster',
-            title: 'new reservation',
-            description: details,
-            label: 'QTuanis Reservation',
-            email: email,
-        };
-
-        task = new fun.models.Task(taskPayload);
-        task.save();
 
         // clean stuff on qtuanis
         view.$('#rooms-email').val('');
