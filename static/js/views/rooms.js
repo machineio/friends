@@ -63,6 +63,10 @@ fun.views.rooms = Backbone.View.extend({
 
         console.log(typeof(email));
 
+        console.log(email === ' ');
+
+        console.log(email==='');
+
         
         if (email !== ''){
             console.log(email, room, checkin, checkout, guests);
@@ -88,8 +92,6 @@ fun.views.rooms = Backbone.View.extend({
 
         task = new fun.models.Task(taskPayload);
         task.save();
-
-        console.log('wut? on booknow');
 
         // clean stuff on qtuanis
         view.$('#rooms-email').val('');
